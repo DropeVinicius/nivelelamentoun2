@@ -241,7 +241,6 @@
             margin: 0;
         }
 
-
         /* Conteúdo da Introdução */
         .introducao {
             display: flex;
@@ -252,106 +251,10 @@
             background-color: #E2F4EB; /* Fundo neutro */
             overflow-x: hidden; /* Impede rolagem horizontal */
         }
-
-
-
+        
         .introducao .titulo-introducao {
             font-family: 'Bebas Neue', cursive;
-            font-size: 30px;
-            font-weight: lighter;
-            color: #015A42; /* Cor verde */
-            margin: 10px auto 10px auto;
-        }
-
-        .introducao .caixa-texto {
-            background-color: #E2F4EB; /* Verde mais claro */
-            padding: 20px;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .introducao .caixa-texto p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 19px;
-            line-height: 1.6;
-            text-align: justify;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        /* Capa do Livro - Responsividade */
-        @media (max-width: 768px) {
-            .capa-livro {
-                height: 350px; /* Reduz a altura da capa */
-                padding: 20px; /* Ajusta o espaçamento interno */
-            }
-
-            .capa-livro .titulo-materia {
-                font-size: 50px; /* Reduz o tamanho do título */
-            }
-
-            .capa-livro .subtitulo-professor {
-                font-size: 30px; /* Reduz o tamanho do subtítulo */
-            }
-
-            .capa-livro .conteudo-capa {
-                padding: 15px; /* Ajusta o padding para telas menores */
-            }
-        }   
-            /* Seção Introdução - Responsividade */
-        @media (max-width: 768px) {
-            .barra-superior {
-                padding: 10px; /* Reduz o padding da barra */
-            }
-
-            .barra-superior .titulo-barra {
-                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
-            }
-
-            .introducao .titulo-introducao {
-                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
-                margin-top: 20px; /* Ajusta o espaçamento superior */
-            }
-
-            .introducao .caixa-texto {
-                padding: 20px; /* Reduz o padding da caixa de texto */
-                width: 90%; /* Ajusta a largura da caixa */
-            }
-
-            .introducao .caixa-texto p {
-                font-size: 1.2rem; /* Reduz o tamanho do texto */
-                line-height: 1.4;
-                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
-            }
-        }
-        /* Responsividade para o título da seção de Programa */
-        @media (max-width: 768px) {
-            .titulo-programa {
-                font-size: 50px; /* Ajuste do tamanho do título */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .titulo-programa {
-                font-size: 35px; /* Ajuste para telas muito pequenas */
-            }
-        }
-        /* Conteúdo da Introdução */
-        .introducao {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0;
-            margin-top: 100px;
-            background-color: #E2F4EB; /* Fundo neutro */
-            overflow-x: hidden; /* Impede rolagem horizontal */
-        }
-
-
-
-        .introducao .titulo-introducao {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 80px;
+            font-size: 50px;
             font-weight: lighter;
             color: #015A42; /* Cor verde */
             margin: 10px auto 10px auto;
@@ -1677,7 +1580,7 @@
         <!-- Conteúdo -->
         <div class="conteudo-introducao">
             <div class="caixa-texto">
-                <h1>INTRODUÇÃO</h1>
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
                 <!-- parágrafo com citação -->
                 <div class="quote-paragraph">
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
