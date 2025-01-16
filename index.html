@@ -1,0 +1,2902 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <title>Nivelamento - Língua Portuguesa Nível 1 - Unidade 2</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Estilização de Bebas Neue INICIO */
+        .intro-conclusao-ref {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 90px;
+        }
+
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 93px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/f_auto,q_auto/v1733243815/ImagemBG-8_wxd0x5.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 60px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+
+
+
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 80px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+
+
+
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 80px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo do ícone de citação */
+        .quote-icon {
+            font-size: 40px; /* Tamanho do ícone */
+            color: #015A42; /* Cor do ícone */
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+            flex-shrink: 0; /* Garante que o ícone não diminua */
+        }
+
+        /* Container do parágrafo com ícone */
+        .quote-paragraph {
+            display: flex; /* Alinha o ícone e o texto lado a lado */
+            align-items: flex-start; /* Alinha verticalmente ao topo */
+            margin-top: 30px auto; /* Espaço superior */
+            width: 100%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Parágrafo do conteúdo */
+        .quote-paragraph p {
+            font-size: 16px; /* Tamanho do texto */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            flex: 1; /* Faz o parágrafo ocupar o espaço restante */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .quote-paragraph {
+                flex-direction: row; /* Mantém ícone e texto lado a lado */
+                align-items: flex-start; /* Alinha ícone ao topo do texto */
+                text-align: justify; /* Garante alinhamento justificado no texto */
+            }
+
+            .quote-icon {
+                font-size: 35px;
+                margin-right: 10px; /* Remove margem lateral */
+            }
+
+            .quote-paragraph p {
+                font-size: 14px; /* Reduz o tamanho do texto */
+                line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+            }
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .secao1 p {
+                font-size: 0.6rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.8rem;
+            }
+
+            .secao1 p {
+                font-size: 1.5rem;
+            } 
+        }
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 50px;
+            box-sizing: border-box;
+            white-space: normal; /* Permite que o texto ocupe várias linhas */
+            word-wrap: break-word; /* Força quebra de palavras longas, se necessário */
+            overflow-wrap: break-word; /* Alternativa para forçar a quebra */
+        }
+
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9F43BE; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #7c34a1; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+
+        .text-red {
+            color: red; /* Define a cor do texto como vermelho */
+            font-weight: bold; /* Opcional: deixa o texto em negrito para destaque */
+            display: inline; /* Garante que o span seja tratado como texto inline */
+            
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        .text-bold {
+            color: #000;
+            font-weight: bold;
+            display: inline; /* Garante que o span seja tratado como texto inline */
+        }
+
+        .text-green {
+            color: #015A42;
+        }
+
+         /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 100px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: 10px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: 5px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: 5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 18px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+
+                /* Quadro com borda violeta */
+        .quadro {
+            border: 2px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadro {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-bottom: 15px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadro {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadro {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadro {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadro {
+                padding: 15px;
+            }
+
+            .titulo-quadro {
+                font-size: 20px;
+            }
+
+            .fonte-quadro,
+            .descricao-quadro {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadro {
+                padding: 10px;
+            }
+
+            .titulo-quadro {
+                font-size: 18px;
+            }
+
+            .fonte-quadro,
+            .descricao-quadro {
+                font-size: 12px;
+            }
+        }
+        
+        .fonte-menor {
+            font-size: 14px; /* Tamanho menor */
+            font-style: italic; /* Opcional: estilização adicional */
+            color: #000; /* Opcional: cor mais discreta */
+        }
+        .fonte-italic {
+            display: block; /* Garante que a citação ocupe uma linha inteira */
+            margin: 0 40px; /* Adiciona margens horizontais */
+            font-style: italic; /* Mantém o estilo itálico, caso necessário */
+            text-align: justify; /* Justifica o texto para alinhamento mais formal */
+        }
+
+        .italic{
+            font-style: italic; /* Mantém o estilo itálico, caso necessário */
+        }
+        .text-right {
+            float: right; /* Alinha o texto à direita */
+            text-align: right; /* Garante que o conteúdo interno também esteja alinhado à direita */
+            font-size: inherit; /* Herda o tamanho da fonte do parágrafo */
+            font-family: inherit; /* Herda a fonte do parágrafo */
+            color: inherit; /* Herda a cor do parágrafo */
+        }
+        .text-center{
+            display: flex;
+            justify-content: space-between;
+            font-size: inherit; /* Herda o tamanho da fonte do parágrafo */
+            font-family: inherit; /* Herda a fonte do parágrafo */
+            color: inherit; /* Herda a cor do parágrafo */
+        }
+        .underline-text {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+                /* Seção para o quadro */
+        .secaoquadro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Quadro com borda violeta e fundo branco */
+        .quadro-textual {
+            border: 2px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Largura ajustável */
+            max-width: 500px; /* Limite de largura */
+        }
+
+        /* Estilo para os textos dentro do quadro */
+        .conteudo-textual p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            margin-bottom: 10px; /* Espaçamento entre as linhas */
+            text-align: center;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .quadro-textual {
+                padding: 15px;
+            }
+
+            .conteudo-textual p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadro-textual {
+                padding: 10px;
+            }
+
+            .conteudo-textual p {
+                font-size: 14px;
+            }
+        }
+
+         /* Tabs container */
+        .tabs-container2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: calc(90% - 10px); /* Subtrai o gap total da largura */
+            max-width: 800px; /* Limite máximo */
+            font-weight: bold;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 5px;
+            box-sizing: border-box; /* Garante que padding e largura sejam incluídos no cálculo */
+        }
+
+        .tab2{
+            flex-grow: 1;  /* Impede que as abas cresçam para ocupar todo o espaço */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o conteúdo e o ícone */
+            justify-content: space-between; /* Texto à esquerda e ícone à direita */
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Para suavizar as bordas dos Tabs */
+            background-color: #9F43BE; /* Cor de fundo violeta para os tabs */
+        }
+                /* Ajustes do ícone no tab */
+        /* Ícone no final do Tab */
+        .icon-wrapper {
+            margin-left: auto; /* Garante que o ícone vá para o fim do tab */
+        }
+
+        .tab2 i {
+            font-size: 18px;
+            color: #ffffff; /* Cor padrão do ícone */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .tab2:hover i {
+            color: #9F43BE; /* Altera a cor no hover */ 
+            transform: scale(1.2); /* Amplia o ícone no hover */
+        }
+        @media (max-width: 480px) {
+            .tab2 i {
+                font-size: 16px; /* Ícone menor para mobile */
+            }
+        }
+        .tab2:hover {
+            background-color: #9744b3a2; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o conteúdo dos Tabs */ 
+        .tab-content2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            background-color: #FFF;
+            display: none; /* Inicialmente escondido */
+            box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura */
+            width: 90%; /* Consistência com outras seções */
+            max-width: 800px; /* Limite máximo */
+            margin-left: auto; /* Centraliza horizontalmente */
+            margin-right: auto; /* Centraliza horizontalmente */
+            height: auto;
+        }
+
+        /* Tab ativo */
+        .tab2.active {
+            background-color: #b114e6; /* Cor mais escura para indicar o ativo */
+            color: #FFFFFF; /* Mantém o texto em branco */
+            font-weight: bold; /* Destaca o texto */
+        }
+
+                    /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-content p {
+            margin: 20px;
+        }
+
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 19px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+
+                    /* Estilo para os tópicos */
+        .topico {
+            margin-bottom: 30px;
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column; /* Para telas menores */
+            align-items: flex-start; /* Alinha o texto à esquerda */
+            gap: 10px;
+        }
+
+        .topico p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+        }
+
+        .imagem-container img {
+            width: 100%; /* Responsivo: ocupa toda a largura disponível */
+            max-width: 800px; /* Limita o tamanho da imagem */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico {
+                align-items: center; /* Centraliza no mobile */
+            }
+            .imagem-container img {
+                width: 100%; /* Ajusta a imagem para telas menores */
+            }
+        }
+                /* Estilo para os tópicos de texto */
+        .topico-texto {
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */            
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+            .text-strike {
+                text-decoration: line-through;
+                color: red;
+        }
+        .text-strikeb {
+                text-decoration: line-through;
+                color: 000;
+        }
+        /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .secao2 p {
+                font-size: 0.6rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.8rem;
+            }
+
+            .secao2 p {
+                font-size: 1.5rem;
+            } 
+        }
+            .poet-frame {
+                border: 2px solid #015A42; /* Cor verde */
+                padding: 20px; /* Espaçamento interno reduzido */
+                margin-top: 10px; /* Espaçamento superior */
+                width: 90%; /* Largura relativa */
+                max-width: 800px; /* Largura máxima */
+                box-sizing: border-box; /* Inclui bordas no cálculo de largura */
+                margin-bottom: 10px;
+        }
+
+        .poet-frame p {
+                font-size: 15px; /* Tamanho reduzido */
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                line-height: 1.6; /* Melhor espaçamento entre linhas */
+                text-align: justify;
+                white-space: pre-line; /* Respeita as quebras de linha */
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .poet-frame p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .poet-frame p {
+                font-size: 12px;
+            }
+        }
+        /* Quadro com borda violeta */
+        .quadrov {
+            border: 2px solid #015A42; /* Borda violeta */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-bottom: 5px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+            .small-frame {
+                border: 2px solid #015A42; /* Cor verde */
+                border-radius: 5px;
+                padding: 10px; /* Espaçamento interno reduzido */
+                margin-top: 20px; /* Espaçamento superior */
+                width: 60%; /* Largura menor para destacar como um quadro pequeno */
+                max-width: 400px; /* Largura máxima */
+                background-color: #FFF;
+        }
+
+        .small-frame p {
+                font-size: 15px; /* Fonte menor */
+                font-family: 'Roboto', sans-serif;
+                color: #000;
+                line-height: 1.6; /* Espaçamento entre linhas */
+                text-align: justify;
+                
+        }
+
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frame {
+                width: 80%; /* Ajuste a largura em telas menores */
+            }
+
+            .small-frame p {
+                font-size: 12px; /* Reduz o tamanho da fonte */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frame {
+                width: 90%; /* Largura total em telas muito pequenas */
+            }
+
+            .small-frame p {
+                font-size: 11px; /* Fonte ainda menor */
+            }
+        }
+            .quadro-violeta {
+                border: 2px solid #9F43BE; /* Borda violeta */
+                background-color: #fce4f2; /* Fundo rosa claro */
+                padding: 10px;
+                border-radius: 5px; /* Sem arredondamento */
+                margin: 20px auto; /* Centraliza o quadro */
+                width: 90%; /* Largura responsiva */
+                max-width: 800px; /* Limite máximo */
+                box-sizing: border-box;
+        }
+
+            .quadro-violeta p {
+                margin-bottom: 10px; /* Espaçamento entre parágrafos */
+                font-size: 16px;
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.6;
+                text-align: justify;
+                color: #333;
+                font-weight: normal;
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 80px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #9F43BE; /* Fundo neutro */
+            border-top: 5px solid #600180;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 80px;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #9F43BE; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+            
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #FFF;
+            margin-bottom: 15px;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 35px; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 1</h1>
+            <h2 class="subtitulo-professor">PROFª VALERIA SILVA ROSA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 2 | ORTOGRAFIA – NORMA CULTA VIGENTE - ACENTUAÇÃO</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <!-- parágrafo com citação -->
+                <div class="quote-paragraph">
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <p>“Cabe à gramática registrar os fatos da língua geral ou padrão, estabelecendo os preceitos de como
+                    se fala e escreve bem, ou de como se pode falar e escrever uma língua. Daí ser a gramática, ao
+                    mesmo tempo, uma ciência e uma arte.” Evanildo Bechara</p>
+                </div>
+                <p>Olá estudante!</p>
+                <p>Você já parou para pensar em como as normas gramaticais influenciam a maneira como falamos e
+                escrevemos? Elas nos auxiliam a estruturar nosso pensamento e comunicação e apresentá-la de uma
+                maneira lógica, para o bem falar e escrever, auxiliando o usuário e falante no conhecimento de sua própria
+                língua materna, fundamentais para o seu desenvolvimento social e cultural.</p>
+                <p>Desde os primórdios, a escrita tem possibilitado a diferentes povos dispor de um conjunto de sinais
+                gráficos que proporcionam a transmissão de palavras por escrito, a grande distância. No entanto, para
+                que a escrita seja mais eficaz, facilitando a comunicação, devemos conhecer bem o vocabulário e as
+                regras de combinação dos sons, das letras e das palavras, aceitas pela comunidade linguística.</p>
+                <p>No entanto, nem toda comunicação necessita de normas gramaticais para o bem falar e escrever, pois
+                devemos considerar as <strong>variações linguísticas e adequações de fala ao nos transportarmos pelos
+                vários níveis da língua,</strong> como fazemos no nosso dia a dia.</p>
+                <p><strong>No ambiente acadêmico e em situações formais, é fundamental entender e utilizar o padrão da
+                língua.</strong> Quando falamos em língua, a comunicação entre os indivíduos como também a importância e a
+                relevância da gramática normativa em níveis de <strong>letramento acadêmico,</strong> considera um padrão que auxilie
+                na boa comunicação, na clareza, na transferência de ideias a demais indivíduos e conhecimento suficiente
+                para que estes mesmos possam trabalhar e/ou produzir diversos textos dos mais variados gêneros que
+                a <strong>esfera acadêmica</strong> aborda.</p>
+                <p>Assim, o conhecimento da Gramática Normativa é fundamental às exigências da nossa sociedade, pois além
+                de estabelecer as normas gramaticais a serem seguidas quanto à utilização de uma determinada língua,
+                seja na forma escrita ou falada, ela orienta o uso da Norma-padrão da língua e, possibilita também que a
+                comunicação entre emissor e receptor ocorra de forma eficaz e de qualidade.</p>
+                <p>O objetivo da Gramática Normativa é padronizar o idioma para toda uma nação e tem como principal
+                função regular a linguagem e estabelecer padrões de escrita e fala para os falantes de uma língua.
+                Graças à gramática, a língua pode ser analisada e preservada, apresentando unidades e estruturas que
+                permitem o bom uso da língua portuguesa.</p>
+                <p>Vale ressaltar a definição do Dicionário Aurélio, gramática é o estudo ou tratado dos fatos da linguagem,
+                falada e escrita, e das leis naturais que a regulam. Além de apresentar regras, a gramática também exerce
+                a função de analisar as estruturas que o falante de uma língua tem programado em sua memória e que
+                lhe permitem usar sua língua. Além disso, <strong>a gramática também tem por função descrever o sistema
+                de um idioma.</strong></p>
+                <p>Por ser um tratado que apresenta as normas reguladoras do idioma, muitas pessoas têm uma visão
+                equivocada sobre a função da gramática. Embora ela determine as condições de uso da língua, sobretudo
+                o uso na modalidade escrita, a gramática não é uma disciplina que procura estabelecer o “certo” e o “errado”
+                nas práticas discursivas, pois tal visão apenas abarcaria a análise da norma culta da língua. É fundamental
+                considerarmos que a língua não é apenas um amontoado de regras que devem ser seguidas à risca
+                pelos falantes, indivíduos formados por características que não permitem qualquer tipo de padronização
+                comportamental.</p>
+                <p>Nas palavras de Marcos Bagno (2009, p. 20), “A língua é um enorme iceberg flutuando no mar do tempo,
+                e a gramática normativa é a tentativa de descrever apenas uma parcela mais visível dele”.</p>
+                <p>Neste estudo vamos explorar dois aspectos essenciais da Gramática Normativa: a ortografia e a acentuação.
+                Também vamos falar sobre as mudanças trazidas pelo Acordo Ortográfico, ajudando você a revisar
+                conceitos e esclarecer dúvidas.</p>
+                <p>Vamos começar?</p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <!-- Título da seção -->
+        <h1>1. ORTOGRAFIA</h1>
+    
+        <!-- Parágrafos -->
+        <p>Você já reparou como cada som da nossa língua é representado por letras? Quando escrevemos, usamos
+        símbolos gráficos que correspondem aos sons da fala. Por exemplo, o som /s/ pode ser representado pela
+        letra “s” (social) ou pelas letras “ss” (pessoa). Há exceções, como a letra “h”, mas a ideia geral é essa:
+        uma relação entre som e símbolo.</p>
+        <p>A <strong>ortografia</strong> é a parte da Gramática Normativa que ensina a escrever corretamente as palavras de uma
+        língua. Ela é a <strong>representação escrita</strong> e deriva das palavras gregas ortho (ορθο no alfabeto grego) que
+        significa “correto” e graphos (γραφος) que significa “escrita”.</p>
+        <p>No entanto, numa visão mais ampla, não podemos deixar de ressaltar os parâmetros das variações
+        históricas, sociais e econômicas, que se valem de seu uso de diferentes maneiras e colocações. As
+        palavras escritas em determinados espaços podem ser consideradas como corretas. Demais camadas
+        da sociedade, que apresentam diferentes letramentos dos que dominam regras gramaticais, não podem
+        ser consideradas inválidas de uso da escrita apenas por considerarmos regras instituídas por alguns que
+        decidiram o correto, mas realmente, se existe uma importância nisso tudo, é unicamente a de manter e
+        assegurar uma comunicação eficiente entre indivíduos que dominam tais regras e vocabulários presentes
+        nas dimensões onde estes transitam.</p>
+        <p>É fundamental compreendermos como alguns aspectos ortográficos podem funcionar na organização
+        textual, garantindo clareza e eficiência na comunicação e na expressão das ideias para que a comunicação
+        seja mais eficiente e cuidada.</p>
+        <!-- parágrafo com citação -->
+        <div class="quote-paragraph">
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <p>“A competência para grafar corretamente as palavras está diretamente ligada ao contato íntimo com
+            essas mesmas palavras. Isso significa que a frequência do uso é que acaba trazendo a memorização
+            da grafia correta. Além disso, deve-se criar o hábito de esclarecer as dúvidas com as necessárias
+            consultas ao dicionário. Trata-se de um processo constante, que produz resultados.” (Pasquale
+            Cipro Neto & Ulisses Infante, Gramática da Língua Portuguesa)</p>
+        </div>
+        <p>Para um estudo completo sobre esse assunto, teríamos de dar noções gerais da origem das palavras,
+        quer recorrendo ao estudo do Latim Vulgar, quer enumerando as palavras provenientes do Grego, Tupi,
+        Árabe e de outras tantas influências em nossa língua.</p>
+        <p>Vamos iniciar nosso estudo com os usos mais necessários e práticos da ortografia para que revisem seus
+        conhecimentos e esclareçam suas dúvidas.</p>
+        <h1><span class="text-green">1.1 USOS MAIS PRÁTICOS E ÚTEIS</span></h1>
+        <p>Uso de S C Ç X SS SC XC com som de /s/. Leia as palavras a seguir :</p>
+        <p>GENIALLY AQUI</p>
+        <p>Repare bem que nessas palavras, as letras destacadas, sozinhas ou agrupadas, representam o som /s/.
+        Para entendermos como cada combinação de letras ajuda a representar o som /s/ em diferentes situações,
+        navegue pelas setas a seguir.</p>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide"><strong>1.</strong> Usa-se a letra <span class="text-red">S</span> para representar o som no início da palavra:</br></br>
+                <strong>🢒 situação, social, sódio, solteiro</strong></div>
+                <div class="slide"><strong>2.</strong> O som <span class="text-red">/s/</span> é representado pela letra <span class="text-red">s</span> depois de algumas consoantes:</br></br>considerar, ensopado, absoluta, urso, bolsa </div>
+                <div class="slide"><strong>3.</strong> Antes das vogais <span class="text-red">e</span> ou <span class="text-red">i</span>, a letra <span class="text-red">c</span> representa o som <span class="text-red">/s/</span>:</br></br>citação, procedência, cebola, cimento, cinema</div>
+                <div class="slide"><strong>4.</strong> Antes das vogais <span class="text-red">a</span>, <span class="text-red">o</span> ou <span class="text-red">u</span>, o som /s/ pode ser representado por <span class="text-red">Ç</span>:</br></br>raça, começo, disposição, caçula</div>
+                <div class="slide"><strong>5.</strong> A letra <span class="text-red">X</span>, em algumas palavras, também pode representar o som <span class="text-red">/s/</span>:</br></br>exploração, extinto, experiente, expectativa</div>
+                <div class="slide"><strong>6.</strong> Entre duas vogais, o som <span class="text-red">/s/</span> pode ser representado pelo dígrafo <span class="text-red">*SS</span>:</br></br>pessoal, omissão, massa, passagem</div>
+                <div class="slide"><strong>7.</strong> Dígrafo <span class="text-red">SC</span> representa o som <span class="text-red">/s/</span>:</br></br>nascimento, fascinante, imprescindível, crescer</div>
+                <div class="slide"><strong>8.</strong> Dígrafo <span class="text-red">XC</span> representa o som <span class="text-red">/s/</span>:</br></br>*Dígrafo é o encontro de duas letras e representa o mesmo som.</div>
+                <div class="slide"><strong>Encontro consonantal</strong> é o encontro de duas consoantes que estão lado a lado, mas</br></br> apresentam sons distintos: e<span class="text-red">xc</span>ursão>>> <span class="text-red">X</span> = <span class="text-red">/s/</span> <span class="text-red">c</span> = <span class="text-red">/k/</span></div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class="fa-solid fa-exclamation"></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">ATENÇÃO</h1>
+                <p class="learn-more-paragraph">
+                    As palavras sessão, seção e cessão têm o mesmo som, no entanto, além da escrita, o sentido é bem
+                    diferente.
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>🢒 Sessão</strong> = reunião, encontro, espaço de tempo: Fizemos uma sessão extra para decidir o
+                    novo acordo.
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>🢒 Seção</strong> = parte, divisão, departamento: Qual é a sua seção eleitoral?
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>🢒 Cessão</strong> = ceder ou seja, ato ou efeito de repartir: O cantor fez a cessão de seus
+                    direitos
+                    autorais.
+                </p>
+            </div>
+        </section>
+    </section>
+    <section id="secao1" class="secao1">
+        <!-- Quadro com borda violeta -->
+        <div class="quadro">
+            <!-- Título centralizado -->
+            <h2 class="titulo-quadro"><span class="text-green">Figura 1.</span> Som de /S/</h2>
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736453925/qjefzzuqb6u9gfhzewlc.png" alt="Descrição da imagem" class="imagem-quadro">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadro"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024.</span></p>
+            <!-- Descrição da imagem -->
+            <p class="descricao-quadro"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A figura apresenta um diagrama que explica diferentes formas de representar o som de /s/ na língua
+            portuguesa. No topo, dentro de um retângulo azul, está o título: “Som de /S/”. As setas partem do título central e se
+            ramificam
+            em sete opções, cada uma com exemplos correspondentes. S: “sanciono” e “absoluta”, destacado com borda laranja. C:
+            “nacional”, destacado com borda laranja. Ç: “criança”, destacado com borda laranja. X: “extinto”, destacado com borda
+            laranja.
+            SS: “congresso”, destacado com borda roxa. SC: exemplo: “crescer”, destacado com borda roxa. XC: “exceto”, destacado com
+            borda roxa.</span></p>
+        </div>
+        <p>O <strong>S</strong> é também utilizado nos adjetivos terminados pelos <strong>sufixos -oso/-osa</strong> que indicam
+        grande quantidade, estado ou circunstância como, por exemplo, bondoso, feiosa, oleoso.
+        Nos sufixos -ês, <strong>-esa, -isa</strong> que indicam origem, título ou profissão como, por exemplo, marquês, português,
+        francesa, poetisa.</p>
+        <p>Veja que interessante na conjugação dos verbos pôr e querer: pôs, quis, quiseram. Ou ainda em ditongos
+        como <strong>coisa, maisena, lousa. E ainda</strong> em todos <strong>os substantivos derivados de verbos</strong> terminados
+        em <strong>“-ender”, “-verter” e “-pelir”</strong>, ficando da seguinte forma: <strong>apreender – apreensão; converter –
+        conversão; expelir – expulsão</strong>.</p>
+        <p>O Z é também utilizado em início, meio e fim de palavras como, por exemplo, zebra, zero; fazenda,
+        trapézio; veloz, tenaz. Outro uso é em <strong>sufixos -ez/-eza</strong> que formam substantivos a partir de adjetivos da
+        seguinte forma: magro – magreza; belo – beleza.</p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class="fa-solid fa-exclamation"></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">ATENÇÃO</h1>
+                <p class="learn-more-paragraph">
+                    <strong>🢒</strong> Escreve-se com <span class="text-red">S</span> (<span class="text-red">= sinho</span>), os diminutivos derivados de palavras que já têm a letra <span class="text-red">S</span>.
+                </p>
+                <p class="learn-more-paragraph centered-paragraph">
+                    casa – casinha</br>
+                    lápis – lapisinho (o acento desaparece)</br>
+                    mesa - mesinha
+                </p>
+                <p class="learn-more-paragraph">
+                <strong>🢒</strong> Usamos <span class="text-red">Z</span> (<span class="text-red">= zinho</span>) em diminutivos de palavras que não têm a letra <span class="text-red">S</span>.
+                </p>
+                <p class="learn-more-paragraph centered-paragraph">
+                    pai – paizinho</br>
+                    balão – balãozinho (~til continua)
+                </p>
+            </div>
+        </section>
+    </section>
+    <section id="secao1" class="secao1">
+    <!-- Título da seção -->
+    <h1><span class="text-green">1.2 PALAVRAS COM A TERMINAÇÃO –ISAR E –IZAR NA FORMAÇÃO DE VERBOS.</span></h1>
+    
+    <!-- Parágrafos -->
+    <p>Grande dificuldade aparece quando queremos escrever verbos com essas terminações. Verifique:</p>
+    </section>
+    <section class="outer-background">
+    <section id="secaoquadro" class="secaoquadro">
+        <!-- Quadro com estilo de slide -->
+        <div class="quadro-textual">
+            <div class="conteudo-textual">
+                <p><strong>Final: Finalizar</strong></p>
+                <p><strong>Aviso: Avisar</strong></p>
+                <p><strong>Pesquisa: Pesquisar</strong></p>
+                <p><strong>Problema: Problematizar</strong></p>
+            </div>
+        </div>
+    </section>
+    </section>
+    <section id="secao1" class="secao1">
+        <!-- Parágrafos -->
+        <p>Observando as palavras com as terminações em questão, você deve ter percebido que elas terminam
+            com <span class="text-red">–IZAR ou –ISAR</span>. O som dessas terminações é o mesmo, mas a <span
+                class="text-red">forma de escrever é diferente</span>.</p>
+        <p>Vamos tentar descobrir alguma regra que nos ajude a escrevê-las corretamente? Mas antes, vamos
+            colocar mais alguns exemplos, separando as terminações:</p>
+        <!-- Tabs -->
+        <div class="tabs-container2">
+            <div class="tab2" data-tab="tabb1">
+                GRUPO 1
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+            <div class="tab2" data-tab="tabb2">
+                GRUPO 2
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+        </div>
+        <!-- Conteúdo dos Tabs -->
+        <div class="tab-content2" id="tabb1">
+            <p>Esquema – esquemat<span class="text-red">izar</span></p>
+            <p>Final – final<span class="text-red">izar</span></p>
+            <p>Valor – valor<span class="text-red">izar</span></p>
+            <p>Real – real<span class="text-red">izar</span></p>
+        </div>
+        <div class="tab-content2" id="tabb2" style="display: none;">
+            <p>Análise – anal<span class="text-red">isar</span></p>
+            <p>Piso – p<span class="text-red">isar</span></p>
+            <p>Liso – al<span class="text-red">isar</span></p>
+            <p>Uso - <span class="text-red">usar</span></p>
+        </div>
+        <!-- Parágrafos -->
+        <p>E agora? Você conseguiu perceber?</p>
+        <p>No <strong>GRUPO 1</strong> quando a palavra original (primitiva) não apresentar a letra <span class="text-red">S</span> na última sílaba derivada terá
+        a terminação  <span class="text-red">-IZAR</span>.</p>
+        <p><span class="text-red">Já no</span> <strong>GRUPO 2</strong> quando a palavra original (primitiva) for escrita com a letra <span class="text-red">S</span>, o <span class="text-red">S</span> permanece na palavra
+        derivada e a terminação será <span class="text-red">–ISAR</span>.</p>
+        <p>Clique nos botões, a seguir, para explorar as diferenças entre as palavras que se escrevem com <span class="text-red">S</span> e as
+        que se escrevem com <span class="text-red">Z</span>.</p>
+
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    ESCREVE-SE COM S
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+        
+                <div class="acordeon-content">
+                    <p>atrás, através, gás, groselha, jus</p>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    ESCREVE-SE COM Z
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>amizade, aprazível, azar, azia, desprezo, giz, talvez, verniz, rodízio</p>
+                </div>
+            </div>
+        </div>
+        <p>Escreve-se com “<span class="text-red">SS</span>” todos os substantivos derivados de verbos terminados em “gredir”, “mitir” e “ceder”.</p>
+        <!-- Quadro com estilo de slide -->
+        <div class="quadro-textual">
+            <div class="conteudo-textual">
+                <p><strong>Agredir – Agressão</strong></p>
+                <p><strong>Admitir – Admissão</strong></p>
+                <p><strong>Suceder – Sucessão</strong></p>
+            </div>
+        </div>
+        <p>Escreve-se com “<span class="text-red">Ç</span>” todos os substantivos derivados dos verbos “TER” e “TORCER”, mais seus derivados.</p>
+        <!-- Quadro com estilo de slide -->
+        <div class="quadro-textual">
+            <div class="conteudo-textual">
+                <p><strong>Abster – Abstenção</strong></p>
+                <p><strong>Ater – Atenção</strong></p>
+                <p><strong>Reter – Retenção</strong></p>
+                <p><strong>Distorcer - Distorção</strong></p>
+            </div>
+        </div>
+        <h1><span class="text-green">1.3 OUTROS USOS ORTOGRÁFICOS</span></h1>
+        <p>Vamos trabalhar agora com palavras que são escritas diferentes e apresentam sons diferentes.</p>
+        <!-- Tópico 1 -->
+        <div class="topico">
+            <p><strong>1.</strong></p>
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela2_iedbab.png" alt="Descrição da Tabela 1">
+            </div>
+        </div>
+        
+        <!-- Tópico 2 -->
+        <div class="topico">
+            <p><strong>2.</strong></p>
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela1_jf14hu.png" alt="Descrição da Tabela 2">
+            </div>
+        </div>
+        <!-- Tópico 3 -->
+        <div class="topico">
+            <p><strong>3.</strong>Escreve-se com X ou CH?</p>
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela3_jngjib.png"
+                     alt="Descrição da Tabela 3">
+            </div>
+        </div>
+        <!-- Tópico 4 -->
+        <div class="topico">
+            <p><strong>4.</strong>O uso da letra H</p>
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela4_nuanu0.png"
+                     alt="Descrição da Tabela 4">
+                     <p><span class="fonte-menor">*etimologia = estudo da origem e da evolução das palavras</span></p>
+            </div>
+        </div>
+        <!-- Tópico 5 -->
+        <div class="topico">
+            <p><strong>5.</strong>Escreve-se com G ou J?</p>
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela5_kbfyqv.png"
+                    alt="Descrição da Tabela 5">
+            </div>
+            <p><span class="fonte-menor">Vamos um pouco além da grafia G ou J?</span></p>
+        </div>
+        <p>Há várias palavras grafadas com G ou J que não há regra específica. São aquelas próprias de origem
+        latina, grega etc como justifiquei no início.</p>
+        <div class="topico">
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela6_wavewh.png"
+                    alt="Descrição da Tabela">
+            </div>
+        </div>
+        <!-- Tópico 6 -->
+        <div class="topico">
+            <p><strong>6.</strong> Escreve-se com C ou QU?</p>
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela7_v9qin8.png"
+                    alt="Descrição da Tabela 6">
+            </div>
+        </div>
+        <h1><span class="text-green">1.4 PALAVRAS HOMÔNIMAS E PARÔNIMAS</span></h1>
+        <!-- Parágrafos -->
+        <p>Existem algumas palavras que nos deixam com uma certa dúvida ao empregá-las no dia a dia. São as
+            palavras <span class="text-red">HOMÔNIMAS</span> e <span class="text-red">PARÔNIMAS</span>. Há diferentes formas de
+            escrita de palavras com significados
+            diferentes.</p>
+        <p>As palavras <span class="text-red">HOMÔNIMAS</span> apresentam a mesma pronúncia, mas significados diferentes:</p>
+        <div class="topico">
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela8_gtz5fw.png"
+                    alt="Descrição da Tabela">
+            </div>
+        </div>
+        <p>As palavras <span class="text-red">PARÔNIMAS</span> são aquelas parecidas na grafia ou na pronúncia, mas apresentam
+            significados
+            diferentes:</p>
+        <div class="topico">
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela9_dg5bfm.png"
+                    alt="Descrição da Tabela">
+            </div>
+        </div>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Vamos fixar nosso aprendizado desse tópico sobre palavras <strong>HOMÔNIMAS</strong> e
+                    <strong>PARÔNIMAS</strong>?
+                </p>
+                <p class="learn-more-paragraph">
+                    Assista ao vídeo a seguir do professor Noslen para expandir sua compreensão!
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/m2aeZ_3M4T4?si=Rf20mcvBMmCQSyV4"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1><span class="text-green">1.5 PALAVRAS E EXPRESSÕES – DIFICULDADES ESPECIAIS</span></h1>
+        <p>Para finalizar a revisão a respeito da <span class="text-red">ORTOGRAFIA</span>, achei necessário acrescentar o item a respeito <span class="text-red"> de
+        palavras e expressões</span> que apresentam algumas dificuldades. Selecionei as mais usadas.</p>
+        <!-- Tópico 1 -->
+        <div class="topico-texto">
+            <p><strong><span class="text-red">1. POR QUE ......POR QUÊ..... PORQUE .......O PORQUÊ</span></strong></p>
+            <ul>
+                <li><span class="text-red">▸ POR QUE</span> é usado para fazer uma pergunta direta ou indireta</li>
+                <li><span class="text-red">▸ Por que</span>  você está triste? >>>> interrogação direta</li>
+                <li>▸ Quero saber <span class="text-red">por que</span> você está triste. >>>> interrogação indireta</li>
+            </ul>
+        </div>
+                <p>
+                    Observe que a interrogação indireta é aquela subordinada a uma outra oração (no caso “Quero saber”) e,
+                    portanto, não apresenta o ponto de interrogação (?)
+                </p>
+        <!-- Tópico 2 -->
+        <div class="topico-texto">
+            <ul>
+                <li><span class="text-red">▸ POR QUÊ</span> é usado para fazer uma pergunta. Na interrogação direta com o sinal de</li>
+                <li>   interrogação. Na indireta, com ponto final</li>
+                <li>▸ Você está emocionado. Por quê?</li>
+                <li>▸ Você está emocionado. Diga-me por quê.</li>
+            </ul>
+        </div>
+        <!-- Tópico 3 -->
+        <div class="topico-texto">
+            <ul>
+                <li><span class="text-red">▸ PORQUE</span> é empregado para se dar uma resposta ou explicação</li>
+                <li>▸ Por que você não me chamou?</li>
+                <li>▸ Não o chamei porque você estava falando ao telefone.</li>
+                <li>▸ Não comprei o carro porque estava muito caro.</li>
+            </ul>
+        </div>
+        <!-- Tópico 4 -->
+        <div class="topico-texto">
+            <ul>
+                <li><span class="text-red">▸ O PORQUÊ.</span> Trata-se, na verdade, de um substantivo, sinônimo de “causa”, “razão”, “motivo”.
+                É por isso que vem precedido de artigo, o, os ou um.</li>
+                <li>▸ As crianças querem saber o porquê de tudo.</li>
+                <li>▸ Tudo nessa vida tem um porquê.</li>
+                <li>▸ A ciência procura o porquê dos fenômenos.</li>
+            </ul>
+        </div>
+    <!-- Tópico 5 -->
+    <div class="topico-texto">
+        <p><strong><span class="text-red">2. A......Á.......À</span></strong></p>
+    </div>
+    <p>
+        Não ocorre crase antes de <strong>verbos no infinitivo</strong> porque nessa situação o <strong>a</strong> só pode ser <strong>ou</strong> preposição <strong>ou</strong>
+        pronome pessoal <strong>ou</strong> artigo feminino singular. Não há fusão de dois <span class="fonte-menor"><strong>as</strong></span>, configurando uma crase ou artigo:
+    </p>
+    <!-- Tópico 6 -->
+    <div class="topico-texto">
+        <ul>
+            <li><span class="topico-destaque">▸ <strong>A</strong> partir de hoje, todas as crianças receberão sobremesa na merenda escolar.</span></li></br>
+            <li>•  Ela começou <strong>a</strong> chorar.                                        <strong>a >>> preposição</strong></li></br>
+            <li>• Prometa que <strong>a</strong> respeitará.                                  <strong>a >>>> pronome pessoal oblíquo (= ela)</strong></li>
+            <li>• Não <strong>a</strong> vi na festa.                                                 <span class="text-strike">(Não vi <strong>ela</strong> na festa)</span></li></br>
+            <li>• <strong>A</strong> árvore está repleta de frutos.                         <strong>A>>> artigo feminino singular</strong></li>
+        </ul>
+        </br>
+        <ul>
+            <li><span class="topico-destaque">▸ <strong>Á</strong> – é usado para <strong>acentuar a sílaba tônica</strong> (mais forte) de uma palavra. Não pode ser usado
+            isoladamente.</span></li></br>
+            <li>• água, árvore, página</li></br>
+        </ul>
+        </br>
+        <ul>
+            <li><span class="topico-destaque">▸ À – é usado quando mencionamos uma direção, sentido ou ação.</span></li></br>
+            <li>• Antonia e João foram <strong>à</strong> igreja bem cedinho.</li>
+            <li>• João foi <strong>à</strong> escola, mas chegou tarde e não pode entrar</li>
+            <li>• João foi <span class="text-strike"><strong>na</strong></span> escola ...</li>
+        </ul>
+    </div>
+    <!-- Tópico 7 -->
+    <div class="topico-texto">
+        <p><strong><span class="text-red">3. Há ....A</span></strong></p>
+        <ul>
+            <li><span class="topico-destaque">▸ <strong>Há é verbo haver</strong>. Na indicação de tempo passado, usa-se impessoalmente o verbo haver. Nesse caso, use há quando puder substituí-lo por <strong>faz.</strong>
+            </span></li>
+            <li>• Ela partiu há uma hora. (faz uma hora)</li>
+            <li>• Há séculos não se vê algo semelhante. (faz séculos)</li>
+            <li>• Empregado assim, o verbo haver indica tempo decorrido, portanto seria redundância acrescentar acrescentar o adverbio atrás.</li>
+            <li>• Há alguns anos .... OU Alguns anos atrás....</li>
+            <li>• Há alguns anos atrás...</li>
+        </ul>
+    </div>
+    <div class="topico-texto">
+        <ul>
+            <li><span class="topico-destaque">▸ Na indicação de tempo futuro, ou de espaço entre épocas, não se trata do verbo haver, mas da <strong>preposição a.</strong></span></li></br>
+            <li>• Estamos a três dias do Natal.</li>
+            <li>• De segunda a sexta estarei em Brasília.</li>
+        </ul>
+    </div>
+    <!-- Tópico 8 -->
+    <div class="topico-texto">
+        <p><strong><span class="text-red">4. .... MIM ...EU...</span></strong></p>
+        <ul>
+            <li>• <span class="text-strikeb">Ela abriu a porta <span class="text-strike">para mim</span> entrar.</span></li>
+            <li>• Ela abriu a porta para eu entrar.</li></br>
+            <li><span class="topico-destaque">▸ Para é uma preposição, mas apesar do pronome pessoal (eu) vir depois dela, não é regido por ela, pois desempenha a função de sujeito do verbo entrar. Sendo assim, deve ser usado o pronome do caso reto (eu) e não o pronome do caso oblíquo (mim).</span></li>
+            <li><span class="topico-destaque">▸ “<strong>Para que eu entrar</strong> corresponde a <strong>para que eu entrasse</strong>.”</span></li>
+        </ul>
+        <p><strong>OBSERVE:</strong></p>
+        <ul>
+            <li>• Não saiam <strong>sem mim</strong>. Mas... Não saiam sem <strong>eu saber</strong>. (eu>> sujeito de saber)</li>
+            <li>• <strong>Para eu viajar</strong> de avião, é preciso um motivo muito forte. Mas .... <strong>Para mim</strong>, viajar de avião é um suplício.</li>
+        </ul>
+    </div>
+    <!-- Tópico 7 -->
+    <div class="topico-texto">
+        <p><strong><span class="text-red">5. ESTÁ....... ESTA.... E......É.....</span></strong></p>
+        <ul>
+            <li><span class="topico-destaque"><strong>▸</strong> A palavra <strong>está</strong> é a flexão do verbo <strong>“estar”</strong> na 3ª. pessoa do singular do presente do indicativo.</span></li>
+            <li>• A menina está concentrada lendo um livro.</li>
+        </ul>
+        <ul>
+            <li><span class="topico-destaque"><strong>▸</strong> A palavra <strong>esta</strong> refere-se a um <strong>pronome demonstrativo feminino</strong>. É usada para objetos que
+            estão próximos de quem fala.</span></li>
+            <li>• Esta decoração foi feita pela minha amiga de infância.</li>
+        </ul>
+    </div>
+    <p>
+        Acrescentando: <strong>Essa (esse)</strong> é usado para retomar um termo, uma ideia ou mesmo uma oração já
+        mencionados.
+    </p>
+    <p><strong>Este (esta)</strong> introduz uma ideia nova, que ainda não foi mencionada.</p>
+    <!-- Tópico 7 -->
+    <div class="topico-texto">
+        <ul>
+            <li>• A Terra gira em torno do Sol. Esta é uma verdade científica descoberta há muitos anos.</li>
+        </ul>
+        <ul>
+            <li><span class="topico-destaque"><strong>▸</strong> Quanto aos <strong>tempos verbais:</strong></span></li>
+            <li>• Esse mês será muito importante para o Programa de Saúde. <strong>(Futuro)</strong></li>
+            <li>• Este mês está sendo especialmente útil para se divulgar a Campanha da Solidariedade. <strong>(Presente)</strong></li>
+            <li>• Esse mês desempenhou um papel heroico no fechamento do Projeto Bem Viver. <strong>(Passado)</strong></li>
+
+        </ul>
+    </div>
+    <div class="topico-texto">
+        <p><strong><span class="text-red">E ....É</span></strong></p>
+        <ul>
+            <li><span class="topico-destaque"><strong>▸</strong> <strong>E</strong> é uma conjunção usada para ligar palavras e orações.</span></li>
+            <li>• Meus pais e eu fomos visitar o Corcovado na cidade do Rio de Janeiro.</li>
+            <li>• A senhorinha parou na porta da mercearia e entrou vagarosamente para comprar pão e legumes.</li>
+            <li><span class="topico-destaque"><strong>▸</strong> <strong>É</strong> refere-se ao verbo “ser”, 3ª. pessoa do singular.</span></li>
+            <li>• Aquele que não perdoa é uma pessoa infeliz.</li>
+        </ul>
+    </div>
+    <div class="topico-texto">
+        <p><strong><span class="text-red">6. PERCA .....PERDA....</span></strong></p>
+        <ul>
+            <li><span class="topico-destaque"><strong>▸</strong> <strong>Perca</strong> é uma forma verbal, flexão do verbo “perder”. Ela aparece na 1ª. e 3ª. pessoas do
+            singular do presente do subjuntivo e na 3ª pessoa do singular do imperativo.</span></li>
+            <li>• O pai de Renato não quer que ele perca a vaga de engenheiro.</li>
+            <li>• Não perca seu tempo tentando convencê-la a não ir para a Bahia.</li>
+            <li><span class="topico-destaque"><strong>▸</strong> <strong>Perda</strong> é um substantivo que significa se privar (desapossar, excluir) de alguém <strong>ou</strong> de algo que se tinha.</span></li>
+            <li>• <strong>Maria ficou muito triste com a perda de seu cachorro Kolly</strong>.</li>
+        </ul>
+    </div>
+    <p>
+        Logicamente, temos mais expressões e palavras que apresentam dificuldades. No entanto, lembrem-se
+        que os melhores amigos na escrita são o professor, em cursos presenciais, o tutor, em cursos a distância
+        e sempre o bom dicionário virtual ou em papel.
+    </p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Que tal testar seus conhecimentos ortográficos?
+                </p>
+                <p class="learn-more-paragraph">
+                    Clique para assistir.
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/_-nX0aWcHlw?si=rdBHCsx43SAXj-BF"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>2. ACENTUAÇÃO GRÁFICA</h1>
+        <p>Antes de iniciar propriamente a acentuação gráfica, leia o texto a seguir, muito interessante, insistindo na
+        IMPORTÂNCIA DOS ACENTOS.</p>
+        <div class="poet-frame">
+            <p>
+                Um poeta escreveu.... “Entre doidos e doídos, prefiro não acentuar”.<br><br>
+                <span class="fonte-italic">Às vezes, não acentuar parece mesmo a solução???<br></span>
+                Eu, por exemplo, prefiro a carne ao carnê.<br>
+                Assim como, obviamente, prefiro o coco ao cocô.<br><br>
+                <span class="fonte-italic">No entanto, nem sempre a ausência do acento é favorável</span> ...<br>
+                Pense no cágado, por exemplo, o ser vivo mais afetado quando alguém pensa que o acento é <br>
+                mera decoração!!<br><br>
+                <span class="fonte-italic">E há outros casos, claro!</span><br>
+                Eu não me medico; eu vou ao médico.<br>
+                Quem baba não é a babá.<br>
+                Você precisa ir à secretaria para falar com a secretária.<br>
+                Seus pais vêm do mesmo país?<br>
+                Seria maio o mês mais apropriado para colocar um maiô?<br>
+                Será que a româ vem de Roma?<br>
+                Você prefere ser uma pessoa vívida ou vivida.<br>
+                Quem sabe mais entre a sábia e o sabiá.<br>
+                O que tem a pele do Pelé?<br>
+                O que há de comum entre um camelo e o camelô?<br>
+                O que será que essa fábrica fabrica?<br>
+                Será melhor lidar com as adversidades da conjunção “mas” ou com as más pessoas?<br>
+                Será que tudo que eu valido se torna válido?<br>
+                E entre o “amem” e o “amém”, que tal os dois?<br><br>
+                Na dúvida, com um pouquinho de contexto, garanto que o público entenderá o que publico.<br>
+                <strong>#portuguêsélegal #portuguêspravida</strong>
+            </p>
+        </div>
+        <p>A língua escrita necessita, na prática, de certos sinais auxiliares para indicar a exata pronúncia das
+        palavras. Assim, a acentuação gráfica serve para auxiliar a representação escrita da palavra.</p>
+        <h1>2.1 OS ACENTOS GRÁFICOS DA LÍNGUA PORTUGUESA</h1>
+        <p>
+            O acento gráfico é o acento da escrita. Ele se caracteriza por marcar a sílaba tônica (a de maior intensidade)
+            de algumas palavras.
+        </p>
+        <!-- Quadro com borda violeta -->
+            <h2 class="titulo-quadrov"><span class="text-green">Figura 2.</span> Acentos Gráficos</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela10_yvtrjn.png"
+                alt="Descrição da imagem" class="imagem-quadrov">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024.</span></p>
+            <!-- Descrição da imagem -->
+            <p class="descricao-quadrov"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A imagem apresenta uma explicação sobre os acentos gráficos na língua portuguesa, com ilustrações e descrições para cada
+            tipo de acento divididas e quatro quadros posicionados horizontalmente. Acento Circunflexo (ˆ): localizado na primeira
+            coluna, “Ele indica a vogal
+            tônica e, o, às vezes a. Timbre fechado.”. Til (~): localizado na segunda coluna, “Ele indica nasalização das vogais.”.
+            Acento Agudo (´): localizado na
+            terceira coluna, “Ele é sempre usado na vogal da sílaba tônica (saúde) ou átona (pé).”. Acento Grave (`): localizado na
+            quarta coluna, “Ele é usado na
+            fusão entre a preposição a com artigos e pronomes (crase): à, às, àquele etc.”. Os elementos visuais incluem um
+            retângulo pontilhado central para
+            destacar os símbolos dos acentos, com setas conectando cada símbolo às descrições detalhadas localizadas ao redor do
+            quadro.</span></p>
+        </div>
+        <p>Para melhor entendermos as regras de acentuação gráfica, devemos observar, preliminarmente, que
+        todas as palavras da Língua Portuguesa podem ser classificadas quanto ao número de sílabas e quanto
+        à tonicidade (sílaba tônica).</p>
+        <p>A sílaba <strong>tônica</strong> apresenta algumas particularidades, levando-se em conta a <strong>posição</strong>, o <strong>timbre</strong> (um som
+        mais aberto ou fechado) e a <strong>nasalização</strong> das vogais. É aquela em que o som recai com maior intensidade
+        na palavra, auxiliando a identificação da sílaba. Ela pode ou não ser acentuada.</p>
+        <p>Assim, ao pronunciarmos a palavra “ca<strong>fé</strong>”, percebemos que a última sílaba é pronunciada com mais
+        intensidade - denominada de <strong>tônica</strong>. A primeira não evidenciamos tal aspecto, por isso é chamada de
+        sílaba átona.</p>
+        <p>Quanto ao número de sílabas, as palavras podem ser classificadas em:</p>
+        <div class="small-frame">
+            <p><strong>Monossilábicas</strong>: pé, pá, há (tônicas)<br>
+            de, me, lhe (átonas)</p>
+            <p><strong>Dissilábicas</strong>: plena, até, ontem, está</p>
+            <p><strong>Trissilábicas</strong>: janela, âmago, parabéns</p>
+            <p><strong>Polissilábicas</strong>: incompetência, aplicação, vocabulário.</p>
+        </div>
+        <p>Verifiquem:</p>
+        <p><span class="fonte-italic">“Que lembrança darei ao país que me deu<br>
+        tudo o que lembro e sei, tudo quanto senti?”</span></p>
+        <p><span class="text-right">(Carlos Drummond de Andrade)</span></p>
+        <p>Perceba que os monossílabos “que”, “ao”, “me”, “o”, “e” são átonos, pronunciados tão fracamente que se
+        apoiam na palavra subsequente. Já os monossílabos representados por “deu” e “sei” demonstram um
+        timbre mais forte, caracterizando-se, portanto, como tônicos.</p>
+        <p>Quanto à tonicidade (sílaba tônica)</p>
+        <div class="small-frame">
+            <p><strong>1. Proparoxítonas:</strong> acento tônico na antepenúltima sílaba (OU na terceira sílaba, da direita
+            para a esquerda): último, ônibus, xícara.</p>
+            <p><strong>2. Paroxítonas:</strong> acento tônico na penúltima sílaba (OU segunda
+            sílaba, da direita para a esquerda): gostoso, lápis, útil.</p>
+            <p><strong>3. Oxítonas:</strong> última sílaba (OU na primeira sílaba da direita para a esquerda): café,
+            racional, feroz.</p>
+        </div>
+            <p>No entanto, <strong>algumas particularidades</strong> devem ser levadas em conta. Repare que todas as palavras
+            <strong>proparoxítonas são acentuadas</strong>. O mesmo não acontece com as paroxítonas e oxítonas. Portanto,
+            essas últimas dependem de certas regras de acentuação.</p>
+            <div class="topico">
+                <div class="imagem-container">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela11_zi9uta.png"
+                        alt="Descrição da Tabela"><br><br><br><br>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela12_zm8ivx.png" alt="Descrição da Tabela">
+                </div>
+    </section>
+    <section id="secao3" class="secao1">
+        <h1>3. NORMA CULTA VIGENTE – A NOVA ORTOGRAFIA DA LÌNGUA PORTUGUESA</h1>
+        <p>Você sabia que a Língua Portuguesa passou por importantes mudanças em sua ortografia? Essas
+        transformações foram implementadas para unificar a escrita nos países que têm o português como língua
+        oficial, promovendo maior integração cultural e linguística.</p>
+        <p>O ACORDO ORTOGRÁFICO DA LÍNGUA PORTUGUESA foi assinado em Lisboa, em 16 de dezembro
+        de 1990, por Portugal, Brasil, Angola, São Tomé e Príncipe, Cabo Verde, Guiné-Bissau, Moçambique e,
+        posteriormente, Timor Leste, após sua independência.</p>
+        <p>Esse acordo é meramente ortográfico, isto é, restringe-se apenas à língua escrita, sem afetar a língua
+        falada. Ela se direciona à uma unificação ortográfica desses países que têm a Língua Portuguesa como
+        oficial. No entanto, algumas mudanças ortográficas foram necessárias para se concretizar essa unificação.</p>
+        <p>A NOVA ORTOGRAFIA DA LÍNGUA PORTUGUESA, como a denominamos, entrou em vigor no Brasil no
+        dia <strong>1º. de janeiro de 2009</strong>, mas durante a transição, as duas ortografias foram válidas até 01 de janeiro
+        de 2016, incluindo concursos públicos, vestibulares, teses, documentos em geral etc.</p>
+        <p>A partir de 01 de janeiro de 2016, essas mudanças estão vigentes e devem ser usadas.
+        Mas o que isso significa para o dia a dia? Apesar de muitas palavras terem permanecido iguais, houve
+        alterações que afetam a grafia e a acentuação de algumas palavras. Vamos explorar juntos os principais
+        pontos do acordo e entender como eles impactam a língua que usamos, tanto na escrita quanto na leitura.</p>
+        <p><span class="fonte-italic">Façam um <strong>SOBREVOO</strong> pela <strong>INFRAESTRUTURA</strong> da Língua Portuguesa e <strong>AVERIGUE</strong> o que muda em
+        seu <strong>Dia A DIA</strong> a partir de 2009. As alterações em nosso <strong>PATRIMÔNIO LINGUÍSTICO</strong> não são tão
+        <strong>TÊNUES</strong> como pensamos inicialmente. Para se ter uma <strong>IDEIA</strong>, são 74 regras contidas em 21 bases
+        (pontos) que compôem o Decreto 6583 [...]. Conheça de forma <strong>TRANQUILA</strong> e <strong>ULTRARRÁPIDA</strong> as
+        <strong>principais</strong> mudanças.</span></p>
+        <p><span class="text-right">www.folhadirigida.com.br</span></p>
+        <h1>3.1 O ALFABETO</h1>
+        <p>Com a reforma, o alfabeto passou de 23 para 26 letras, reincorporando o k, o w e o y. Mas essas letras
+        já eram utilizadas em casos específicos, como:</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Palavras estrangeiras</strong>: Kuwait, Darwin;</li>
+                <li><span class="topico-destaque"><strong>▸ Abreviaturas, símbolos, siglas e palavras adotadas como unidades de medida internacional:</strong> km (quilômetro), kg (quilograma), W (watt).</li>
+                <li><span class="topico-destaque"><strong>▸ Palavras e nomes estrangeiros e seus derivados:</strong> show, playboy, yin, yang, William, web.</li>
+            </ul>
+        </div>
+        <p>Isso facilita a inclusão de termos internacionais no nosso cotidiano, sem alterar a essência da língua.</p>
+        <h1>3.2 ACENTUAÇÃO</h1>
+        <p>Um dos pontos mais perceptíveis da reforma está na simplificação do uso de acentos. Vamos a alguns exemplos:</p>
+        <p>No caso de <strong>DITONGOS</strong> (encontro de duas vogais pronunciadas em uma única sílaba) abertos <strong>-ei -oi</strong>, não são mais acentuados, em palavras paroxítonas com acento tônico (sílaba mais forte) na penúltima sílaba.</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Antes:</strong> assembléia, estréia, idéia, plateia, Coréia<br>
+                jóia, heróico, bóia, paranóico, apóio (verbo e substantivo; a pronúncia é que muda).</li>
+                <li><span class="topico-destaque"><strong>▸ Agora:</strong> assembleia, estreia, ideia, plateia, Coreia<br>
+                joia, heroico, boia, paranoico, apoio.</li>
+                <li><span class="topico-destaque"><strong>▸ Palavras e nomes estrangeiros e seus derivados:</strong> show,
+                        playboy, yin, yang, William, web.</li>
+            </ul>
+        </div>
+        <p>Mas atenção! Os ditongos abertos <strong>–ei, - oi</strong>, em palavras oxítonas e monossilábicas, permanecem (o <strong>-eu</strong>
+        também): <strong>chapéu, céu, réu, anéis, papéis, herói, dói, constrói.</strong></p>
+        <p>Quando <strong>i</strong> e <strong>u</strong> forem tônicos e após um ditongo, nas palavras paroxítonas, não são mais acentuados.</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Antes:</strong> feiúra, baiúca, Saúipe</li>
+                <li><span class="topico-destaque"><strong>▸ Agora:</strong> feiura, baiuca, Sauipe</li> 
+            </ul>
+        </div>
+        <p>Não se esqueça que continuam sendo acentuados quando eles estão em posição final em palavras
+        oxítonas: Piauí, Piraí, baús, Anhangabaú, Itaú.</p>
+        <p><strong>OBSERVAÇÃO: Algumas palavras mudam o significado:</strong></p>
+        <div class="small-frame">
+            <p>pronúncia (substantivo) <span class="text-right">pronuncia (verbo)</span></p>
+            <p>matrícula (substantivo) <span class="text-right">matricula (verbo)</span></p>
+            <p>específica (adjetivo) <span class="text-right">especifica (verbo)</span></p>
+        </div>
+        <h1>3.3 TREMA</h1>
+        <p>O trema foi eliminado da escrita em palavras como linguiça, tranquilo, consequência. No entanto, a
+        pronúncia das palavras permanece a mesma. Nomes próprios estrangeiros, como Müller e Bündchen,
+        mantêm o sinal.</p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Figura 3.</span> Trema</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736974969/ctxbsiy28px8misckncp.png"
+                alt="Descrição da imagem" class="imagem-quadrov">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: https://blog.enem.com.br/novo-acordo-ortografico-uso-do-trema/</span></p>
+            <!-- Descrição da imagem -->
+            <p class="descricao-quadrov"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A imagem é uma charge humorística envolvendo duas letras humanizadas, o “V”
+            e o “U”, que possuem olhos e estão dialogando. Letra V diz: “E o seu trema, querida?”. Letra U responde:
+            “Ah, isso não se usa mais...”. A ilustração usa balões de fala típicos de histórias em quadrinhos e explora
+            a personificação das letras para tratar de mudanças nas regras gramaticais.</span></p>
+        </div>
+        <h1>3.4 ACENTO CIRCUNFLEXO</h1>
+        <p>O acento circunflexo em letras dobradas, no acordo vigente, desaparece quando as palavras são terminadas
+        em êem dos verbos ler, crer, ver e dar, que antes eram apresentados como crêem, dêem, lêem, vêem;
+        prevêem e agora sem a acentuação ficam <strong>creem, deem, leem, veem; preveem.</strong></p>
+        <p>No caso das palavras terminadas em <strong>oo</strong> (ou <strong>oos</strong>) como antes em vôo, enjoôs, dôo (verbo doar), que
+        agora são apresentadas sem o acento ficando deste modo: <strong>voo, enjoos; doo.</strong></p>
+        <p>Os verbos <strong>ter e vir</strong> continuam igual os verbos ter e vir no Presente do Indicativo. Atenção especial,
+        porém, a acentuação no singular e plural.</p>
+        <!-- Quadro com estilo de slide -->
+        <div class="quadro-textual">
+            <div class="conteudo-textual">
+                <p><strong>Ele tem – Eles têm <span class="text-right">Ele vem – Eles vêm</span></strong></p>
+            </div>
+        </div>
+        <p>Os verbos <span class="underline-text">derivados</span> de <span class="underline-text">ter</span> e <span class="underline-text">vir</span> (deter, conter, manter; convir, intervir etc) recebem acento agudo na 3ª.
+        pessoa do singular e acento circunflexo na 3ª. pessoa do plural:</p>
+        <!-- Quadro com estilo de slide -->
+        <div class="quadro-textual">
+            <div class="conteudo-textual">
+                <p><strong>ele detém – eles detêm <span class="text-right"> ele mantém – eles mantêm</span><br><br>ele intervém – eles intervêm</span></strong></p>
+            </div>
+        </div>
+        <div class="quadro-violeta">
+            <p><strong><span class="text-red">ATENÇÃO:</span></strong> Algumas palavras <strong>mudam o significado quando usamos o acento circunflexo.</strong></p>
+            <p>O Japão possui grande <strong>influência</strong> na economia mundial. <span class="text-right"><strong>influência</strong> (substantivo)</span></p>
+            <p>O Japão <strong>influencia</strong> muitos países do mundo. <span class="text-right"><strong>influencia</strong> (verbo)</span></p>
+            <p><strong>providencia</strong> (verbo) <span class="text-right"><strong>providência</strong> (substantivo)</span></p>
+        </div>
+        <h1>3.5 ACENTO DIFERENCIAL</h1>
+        <p>
+            O <strong>acento diferencial</strong> faz a distinção entre palavras que apresentam a mesma grafia. Com a reforma
+            ortográfica <strong>desaparece esse acento nos pares</strong> e são diferenciados apenas pelo contexto. A pronúncia
+            não mudou, como podemos observar nos exemplos a seguir:
+        </p>
+        <div class="topico">
+            <div class="imagem-container">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela13_rxze9n.png"
+                    alt="Descrição da Tabela">
+            </div>
+        </div>
+        <p>Continuam iguais os pares:</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸</strong> (1) pôde/pode</li>
+                    <li>Pôde >> 3ª. pessoa do singular do pretérito perfeito do indicativo do verbo poder.</li>
+                    <li>Pode >> 3ª. pessoa do singular do presente do indicativo).</li>
+                <li><span class="topico-destaque"><strong>▸</strong> (2) Pôr (verbo) / por (preposição)</li>
+            </ul>
+        </div>
+        <p>É facultativo em casos como :</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸</strong> fôrma ou forma >>> de bolo e o verbo formar</li>
+                <li><span class="topico-destaque"><strong>▸</strong> verbo dar >>> dêmos (presente do subjuntivo, 1ª. pessoa do plural)
+                demos (pretérito perfeito do indicativo, 1ª. p. do pl)</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Que tal aprimorar seus conhecimentos em acentuação gráfica?<br>
+                    Não perca essa oportunidade de reforçar seus estudos e melhorar sua comunicação!
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>Clique abaixo para assistir:</strong>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/HSdrpIsi_Gc?si=8zUkijNN7fTfDPS3"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>3.6 HÍFEN</h1>
+        <!-- Quadro com borda violeta -->
+        <div class="quadro">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737038271/qrxb0pxai57n46jawpji.jpg"
+                alt="Descrição da imagem" class="imagem-quadro">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadro"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024. Adaptado de 123RF.</span></p>
+            <!-- Descrição da imagem -->
+            <p class="descricao-quadro"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A imagem é uma charge humorística envolvendo dois
+            personagens e um micro-ondas. O personagem à esquerda, ilustrado com uma camisa
+            vermelha, aponta para o micro-ondas e pergunta: “O que tem de errado com meu
+            microondas?”. O personagem à direita, ilustrado com uma camisa azul e um jaleco azul
+            mais claro, vestido como técnico, responde: “Tem que colocar um hífen!”</span></p>
+        </div>
+        <p>O uso do hífen foi outro ponto revisado. Houveram algumas mudanças em seu emprego no NOVO ACORDO
+        ORTOGRÁFICO, como no caso da charge acima com o uso da palavra “Micro-ondas” Esse é um dos
+        pontos mais complexos da Língua Portuguesa.</p>
+        <p>O <span class="text-red">HÍFEN (-)</span> é um sinal gráfico utilizado para:</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸</strong> Formar palavras compostas;</li>
+                <li><span class="topico-destaque"><strong>▸</strong> Ligar pronomes <strong>oblíquos átonos</strong> aos <strong>verbos</strong>.</li>
+            </ul>
+        </div>
+        <p>Exemplo: <strong>amá-la</strong> (posição enclítica); <strong>entender-nos-íamos</strong> (posição mesoclítica) e à palavra <strong>eis</strong>: Eis-me aqui.</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸</strong> Separar sílabas, bem como na <strong>translineação*</strong> das palavras, que é a divisão silábica na passagem de uma linha para outra.</li>
+            </ul>
+        </div>
+        <p>Exemplo: <strong>*or-ga-ni-za-ção.</strong></p>
+        <p><span class="text-red">Não se usa mais hífen</span> em <strong>algumas</strong> palavras compostas por <span class="text-red">“de”</span> como: pé de moleque, bico de papagaio, cão de guarda, fim de semana, pão de mel.</p>
+        <p><span class="text-red">Não se utiliza mais HÍFEN</span> em palavras formadas de <span class="text-red">prefixos</span> terminados em vogal e palavra seguinte iniciadas por <span class="text-red">“r”</span> ou <span class="text-red">“s”</span>. As letras <span class="text-red">“r”</span> ou <span class="text-red">“s”</span> devem ser dobradas:</p>
+    <div class="topico">
+        <div class="imagem-container">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela14_k1ypcd.png"
+                alt="Descrição da Tabela">
+        </div>
+    </div>
+    <div class="topico">
+        <div class="imagem-container">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela15_i90vtv.png"
+                alt="Descrição da Tabela">
+        </div>
+    </div>
+    <div class="topico">
+        <div class="imagem-container">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela16_gv1zfh.png"
+                alt="Descrição da Tabela">
+        </div>
+    </div>
+    <div class="topico">
+        <div class="imagem-container">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782312/Tabela17_aihyep.png"
+                alt="Descrição da Tabela">
+        </div>
+    </div>
+        <h1>3.7 LETRAS MAIÚSCULAS</h1>
+        <p>Não houve alteração nas regras, com exceção de nomes de vias e lugares públicos e os que designam
+        artes, ciências e disciplinas, mas poderão ser escritas com letras maiúsculas ou minúsculas, dependendo
+        do escritor se quiser dar mais ênfase e atenção a essas palavras.</p>
+        <p>Portanto, é facultativa a grafia de Rua ou rua; Praça da Bandeira ou praça; Geografia ou geografia etc. Se
+        quiser realçar, use a maiúscula.</p>
+        <p>Já em nomes compostos que fazem parte de títulos próprios — como instituições, cargos, eventos ou
+        fatos históricos —, a inicial maiúscula é obrigatória. Veja alguns exemplos:</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Pró-Reitoria de Ensino e Pesquisa</strong></li>
+                <li><span class="topico-destaque"><strong>▸ Organização Pan-Americana de Saúde</strong></li>
+                <li><span class="topico-destaque"><strong>▸ Comissão Sul-Africana</strong></li>
+                <li><span class="topico-destaque"><strong>▸ Programa de Pós-Graduação</strong></li>
+                <li><span class="topico-destaque"><strong>▸ Quarta-Feira</strong></li>
+            </ul>
+        </div>
+        <p>Se os nomes compostos não forem próprios, as regras mudam um pouco. Nesses casos, o segundo
+        elemento permanece em minúscula, exceto quando o nome composto inicia uma frase. Por exemplo:</p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ <span class="italic">Couve-flor tem propriedades muito importantes para a saúde.</span></strong></li>
+                <li><span class="topico-destaque"><strong>▸ <span class="italic">Todas as vezes que compro couve-flor, após um dia, ela fica amarelada.</span></strong></li>
+            </ul>
+        </div>
+        <p>Assim, é importante considerar o contexto e a finalidade do texto para decidir o uso adequado das maiúsculas,
+        garantindo clareza e coesão na escrita. Devemos lembrar que a gramática em geral significa o conjunto de
+        regras que determinam o uso correto tanto da língua escrita (ortografia) como da língua falada.</p>
+        <p>A leitura constante é um instrumento muito importante para o uso correto do nosso idioma, para se familiarizar
+        com as formas corretas da norma-padrão, para aprimorar o nosso vocabulário. Não devemos nos ater
+        naquela leitura na qual apenas codificamos as letras, nossa leitura deve ser atenta, meditativa, reflexiva.</p>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>O estudo da gramática normativa e da ortografia, incluindo suas regras e atualizações, é indispensável
+                para garantir uma comunicação clara e eficaz. A Língua Portuguesa, além de ser um patrimônio cultural, é
+                uma ferramenta essencial de interação social, e dominar suas normas contribui tanto para a transmissão
+                precisa de ideias quanto para a preservação de sua estrutura. As mudanças promovidas pelo Acordo
+                Ortográfico, por sua vez, reforçam a importância de um aprendizado contínuo que respeite as novas
+                normas sem deixar de valorizar a diversidade linguística.</p>
+                <p>Compreender e aplicar as regras da língua portuguesa vai muito além de um requisito acadêmico ou
+                profissional. Trata-se de um gesto de valorização cultural e de cidadania. A leitura atenta e a prática
+                constante são aliadas indispensáveis nesse processo, promovendo não apenas o aprimoramento pessoal,
+                mas também a inclusão e o respeito no convívio social.</p>
+                <p>Portanto, dominar a norma culta da língua é mais do que um objetivo técnico; é um passo essencial para
+                transformar o conhecimento em um instrumento de desenvolvimento individual e coletivo, contribuindo
+                para uma comunicação mais consciente e uma sociedade mais conectada.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <!-- Conteúdo -->
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS BIBLIOGRÁFICAS</h1>
+                <p>ALMEIDA, Antonio Fernando de; ALMEIDA, Valéria Silva Rosa de. Português Básico: gramática, redação,
+                textos. 5.ed. São Paulo: Atlas, 2005.</p>
+                <p>BAGNO, Marcos. Preconceito linguístico – o que é, como se faz. 52 ed. São Paulo: Loyola, 2009.</p>
+                <p>BECHARA, E. Moderna gramática portuguesa. 21.ed. São Paulo: Nacional, 1976.</p>
+                <p>_________. A Nova Ortografia. Rio de Janeiro: Nova Fronteira, 2008.</p>
+                <p>NICOLA, José de; INFANTE, Ulisses. Gramática Contemporânea da Língua Portuguesa.7.ed. são
+                Paulo: Scipione, 1991.</p>
+                <p>TUDO SOBRE CONCURSOS. Reforma ortográfica da Língua Portuguesa. Tudo sobre concursos,
+                [s.d.]. Disponível em: http://www.tudosobreconcursos.com/materiais/portugues/reforma-ortografica-da
+                lingua-portuguesa. Acesso em: 03 mar. 2021.</p>
+                <p>VOCABULÁRIO ortográfico da Língua Portuguesa. 5.ed. São Paulo: Global, 2009.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        let currentIndex = 0;
+
+            function showSlide(index) {
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+                const totalSlides = slides.length;
+
+                // Corrigir o índice ao atingir o início ou fim
+                if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+
+                // Move o slider para o slide atual
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+
+            // Inicializa o slider
+            showSlide(currentIndex);    
+            // Script para funcionalidade dos Tabs da nova seção (tabs-container2)
+                document.querySelectorAll('.tab2').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const targetId = tab.getAttribute('data-tab');
+
+                        // Remove o conteúdo visível de todos os Tabs dentro da nova seção
+                        document.querySelectorAll('.tab-content2').forEach(content => {
+                            content.style.display = 'none';
+                        });
+
+                        // Mostra o conteúdo do Tab clicado
+                        document.getElementById(targetId).style.display = 'block';
+
+                        // Remove a classe 'active' de todos os Tabs dentro da nova seção
+                        document.querySelectorAll('.tab2').forEach(t => {
+                            t.classList.remove('active');
+                        });
+
+                        // Adiciona a classe 'active' ao Tab clicado
+                        tab.classList.add('active');
+                    });
+                });    
+                // Navbar
+                    document.querySelector('.menu-toggle').addEventListener('click', () => {
+                        const menu = document.querySelector('.navbar ul');
+                        const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                        menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                        // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                        icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                        icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+                    });
+                    // Fechar o menu ao clicar em um link
+                    const links = document.querySelectorAll('.navbar ul li a');
+                    links.forEach(link => {
+                        link.addEventListener('click', () => {
+                            const menu = document.querySelector('.navbar ul');
+                            const icons = document.querySelectorAll('.menu-toggle i');
+
+                            // Fecha o menu ao clicar no link
+                            menu.classList.remove('show');
+                            icons[0].style.display = 'block'; // Exibe o ícone de menu
+                            icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                        });
+                    });
+                    // Captura o elemento navbar
+                    const navbar = document.querySelector('.navbar');
+
+                    // Função que altera a opacidade da navbar
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                            navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                        } else {
+                            navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                        }
+                    });
+                    // Script para funcionalidade do acordeon
+                    document.querySelectorAll('.acordeon-header').forEach(header => {
+                        header.addEventListener('click', () => {
+                            const content = header.nextElementSibling;
+                            const isVisible = content.style.display === 'block';
+
+                            // Apenas abre ou fecha o acordeon clicado
+                            content.style.display = isVisible ? 'none' : 'block';
+
+                            // Alternar a classe da seta
+                            const icon = header.querySelector('.acordeon-icon');
+                            if (icon) {
+                                icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                                icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                            }
+                        });
+                    });
+                    // Script para funcionalidade do novo accordion
+                    document.querySelectorAll('.accordion-header-diferente').forEach(header => {
+                        header.addEventListener('click', () => {
+                            const content = header.nextElementSibling;
+                            const isVisible = content.style.display === 'block';
+
+                            // Apenas abre ou fecha o accordion clicado
+                            content.style.display = isVisible ? 'none' : 'block';
+
+                            // Alternar a classe da seta
+                            const icon = header.querySelector('.accordion-icon-diferente');
+                            if (icon) {
+                                icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                                icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                            }
+                        });
+                    });
+                    // Função para abrir o modal com o vídeo
+                        function openVideoModal(element) {
+                            var videoModal = document.getElementById('videoModal');
+                            var iframe = document.getElementById('videoIframe');
+
+                            // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                            var videoLink = element.getAttribute("data-video");
+
+                            // Define o src do iframe com o link do vídeo
+                            iframe.src = videoLink;
+
+                            // Exibe o modal
+                            videoModal.style.display = "flex";
+                        }
+
+                        // Função para fechar o modal
+                        function closeVideoModal() {
+                            var videoModal = document.getElementById('videoModal');
+                            var iframe = document.getElementById('videoIframe');
+
+                            // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                            iframe.src = "";
+                            videoModal.style.display = "none";  // Fecha o modal
+                        }
+
+                        // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                        document.getElementById('videoModal').addEventListener('click', function (event) {
+                            // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                            if (event.target === this) {
+                                closeVideoModal();
+                            }
+                        });
+    </script>
+</body>
+</html>
