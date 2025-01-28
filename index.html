@@ -15,11 +15,12 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
         }
         html {
             scroll-behavior: smooth;
         }
-        
+    
         .titulo-programa {
             font-family: 'Bebas Neue', cursive;
             font-size: 70px;
@@ -423,7 +424,7 @@
             }
 
             .secao1 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
         /* Container do slider */
@@ -483,8 +484,15 @@
         .text-red {
             color: red; /* Define a cor do texto como vermelho */
             font-weight: bold; /* Opcional: deixa o texto em negrito para destaque */
-            display: inline; /* Garante que o span seja tratado como texto inline */
-            
+            display: inline-block; /* Resolve problemas de quebra */
+            word-wrap: break-word; /* Garante que palavras longas quebrem */
+            white-space: normal; /* Permite quebras normais de linha */
+        }
+        @media (max-width: 768px) {
+        .text-red {
+            font-size: 18px; /* Ajuste de tamanho */
+            word-break: break-word; /* Permite quebra de palavras longas */
+        }   
         }
         .text-center {
             text-align: center;
@@ -1086,7 +1094,7 @@
         }
                 /* Estilo para os tópicos de texto */
         .topico-texto {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             width: 90%;
             max-width: 800px;
             padding: 10px;
@@ -1101,19 +1109,25 @@
         }
 
         .topico-texto ul {
-            list-style: none; /* Remove marcadores padrão */            
+            list-style: none; /* Remove marcadores padrão */   
+            padding-left: 0; /* Remove o recuo padrão */         
         }
 
         .topico-texto ul li {
-            font-size: 16px;
+            font-size: 18px;
             font-family: 'Roboto', sans-serif;
             color: #333;
             margin-bottom: 10px;
             display: flex;
-            align-items: flex-start; /* Alinha o texto com o ícone */
-            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+            flex-wrap: wrap;
+            align-items: center; /* Alinha o texto com o ícone */
+            gap: 5px;
+            white-space: normal; /* Permite quebras normais de linha */
+            word-wrap: break-word; /* Quebra palavras longas */
+            overflow-wrap: break-word; /* Compatível com mais navegadores */
+            line-height: 1.5; /* Melhora o espaçamento entre linhas */
         }
-                .topico-destaque {
+            .topico-destaque {
             font-size: 18px; /* Aumente o tamanho conforme a necessidade */
             font-weight: 400;
             padding: 5px 0;
@@ -1130,7 +1144,7 @@
             }
 
             .topico-texto ul li {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
             .text-strike {
@@ -1451,7 +1465,15 @@
             line-height: 1.6;
             text-align: justify;
             color: #FFF;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
         }
                 /* Ajustes responsivos */
         @media (max-width: 768px) {
@@ -1471,7 +1493,7 @@
 
         @media (max-width: 480px) {
             .referencias .titulo-referencias {
-                font-size: 35px; /* Menor tamanho da fonte no mobile */
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
             }
 
             .referencias .caixa-texto {
@@ -1482,6 +1504,8 @@
                 font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
             }
         }
+
+        
         /* Estilização do rodapé */
         .footer {
             border-top: 5px solid #015A42; /* Borda superior */
@@ -1556,14 +1580,14 @@
 
             /* Texto de legenda */
             #caption {
-    color: #fff; /* Cor do texto */
-    font-family: 'Roboto', sans-serif; /* Fonte */
-    font-size: 16px; /* Tamanho da fonte */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 10px; /* Espaço entre a imagem e o texto */
-    padding: 0 20px; /* Adiciona espaçamento para não encostar nas bordas */
-    word-wrap: break-word; /* Permitir quebra de linha em textos longos */
-}
+                color: #fff; /* Cor do texto */
+                font-family: 'Roboto', sans-serif; /* Fonte */
+                font-size: 16px; /* Tamanho da fonte */
+                text-align: center; /* Centraliza o texto */
+                margin-top: 10px; /* Espaço entre a imagem e o texto */
+                padding: 0 20px; /* Adiciona espaçamento para não encostar nas bordas */
+                word-wrap: break-word; /* Permitir quebra de linha em textos longos */
+            }
 
 
             /* Botão de fechar */
@@ -1589,6 +1613,7 @@
                     font-size: 30px;
                 }
             }
+            
     </style>
 </head>
 <body>
@@ -2091,7 +2116,7 @@
             <ul>
                 <li><span class="text-red">▸ POR QUE</span> é usado para fazer uma pergunta direta ou indireta</li>
                 <li><span class="text-red">▸ Por que</span>  você está triste? >>>> interrogação direta</li>
-                <li>▸ Quero saber <span class="text-red">por que</span> você está triste. >>>> interrogação indireta</li>
+                <li>▸ Quero saber<span class="text-red">por que</span> você está triste. >>>> interrogação indireta</li>
             </ul>
         </div>
                 <p>
@@ -2102,7 +2127,7 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="text-red">▸ POR QUÊ</span> é usado para fazer uma pergunta. Na interrogação direta com o sinal de</li>
-                <li>   interrogação. Na indireta, com ponto final</li>
+                <li>interrogação. Na indireta, com ponto final</li>
                 <li>▸ Você está emocionado. Por quê?</li>
                 <li>▸ Você está emocionado. Diga-me por quê.</li>
             </ul>
@@ -2120,7 +2145,7 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="text-red">▸ O PORQUÊ.</span> Trata-se, na verdade, de um substantivo, sinônimo de “causa”, “razão”, “motivo”.
-                É por isso que vem precedido de artigo, o, os ou um.</li>
+                É por isso que vem precedido de artigo, <span class="text-red">o</span>, <span class="text-red">os</span> ou <span class="text-red">um</span>.</li>
                 <li>▸ As crianças querem saber o porquê de tudo.</li>
                 <li>▸ Tudo nessa vida tem um porquê.</li>
                 <li>▸ A ciência procura o porquê dos fenômenos.</li>
@@ -2138,10 +2163,10 @@
     <div class="topico-texto">
         <ul>
             <li><span class="topico-destaque">▸ <strong>A</strong> partir de hoje, todas as crianças receberão sobremesa na merenda escolar.</span></li></br>
-            <li>•  Ela começou <strong>a</strong> chorar.                                        <strong>a >>> preposição</strong></li></br>
-            <li>• Prometa que <strong>a</strong> respeitará.                                  <strong>a >>>> pronome pessoal oblíquo (= ela)</strong></li>
-            <li>• Não <strong>a</strong> vi na festa.                                                 <span class="text-strike">(Não vi <strong>ela</strong> na festa)</span></li></br>
-            <li>• <strong>A</strong> árvore está repleta de frutos.                         <strong>A>>> artigo feminino singular</strong></li>
+            <li>• Ela começou <strong>a</strong> chorar. <strong>a >>> preposição</strong></li></br>
+            <li>• Prometa que <strong>a</strong> respeitará. <strong>a >>>> pronome pessoal oblíquo (= ela)</strong></li>
+            <li>• Não a vi na festa. <span class="text-strike">(Não vi <strong>ela</strong> na festa)</span></li></br>
+            <li>• <strong>A</strong> árvore está repleta de frutos. <strong>A>>> artigo feminino singular</strong></li>
         </ul>
         </br>
         <ul>
@@ -2684,20 +2709,21 @@
     </section>
     <!-- Seção Referências-->
     <section id="referencias" class="referencias">
-        <!-- Conteúdo -->
         <div class="conteudo-referencias">
             <div class="caixa-texto">
                 <h1 class="titulo-referencias">REFERÊNCIAS BIBLIOGRÁFICAS</h1>
                 <p>ALMEIDA, Antonio Fernando de; ALMEIDA, Valéria Silva Rosa de. Português Básico: gramática, redação,
-                textos. 5.ed. São Paulo: Atlas, 2005.</p></br>
-                <p>BAGNO, Marcos. Preconceito linguístico – o que é, como se faz. 52 ed. São Paulo: Loyola, 2009.</p></br>
-                <p>BECHARA, E. Moderna gramática portuguesa. 21.ed. São Paulo: Nacional, 1976.</p></br>
-                <p>_________. A Nova Ortografia. Rio de Janeiro: Nova Fronteira, 2008.</p></br>
-                <p>NICOLA, José de; INFANTE, Ulisses. Gramática Contemporânea da Língua Portuguesa.7.ed. são
-                Paulo: Scipione, 1991.</p></br>
-                <p>TUDO SOBRE CONCURSOS. Reforma ortográfica da Língua Portuguesa. Tudo sobre concursos,
-                [s.d.]. Disponível em: http://www.tudosobreconcursos.com/materiais/portugues/reforma-ortografica-da
-                lingua-portuguesa. Acesso em: 03 mar. 2021.</p></br>
+                    textos. 5.ed. São Paulo: Atlas, 2005.</p>
+                <p>BAGNO, Marcos. Preconceito linguístico – o que é, como se faz. 52 ed. São Paulo: Loyola, 2009.</p>
+                <p>BECHARA, E. Moderna gramática portuguesa. 21.ed. São Paulo: Nacional, 1976.</p>
+                <p>_________. A Nova Ortografia. Rio de Janeiro: Nova Fronteira, 2008.</p>
+                <p>NICOLA, José de; INFANTE, Ulisses. Gramática Contemporânea da Língua Portuguesa.7.ed. São Paulo:
+                    Scipione, 1991.</p>
+                <p>TUDO SOBRE CONCURSOS. Reforma ortográfica da Língua Portuguesa. Tudo sobre concursos, [s.d.]. Disponível
+                    em: <a
+                        href="http://www.tudosobreconcursos.com/materiais/portugues/reforma-ortografica-da-lingua-portuguesa"
+                        target="_blank">http://www.tudosobreconcursos.com/materiais/portugues/reforma-ortografica-da-lingua-portuguesa</a>.
+                    Acesso em: 03 mar. 2021.</p>
                 <p>VOCABULÁRIO ortográfico da Língua Portuguesa. 5.ed. São Paulo: Global, 2009.</p>
             </div>
         </div>
