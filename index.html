@@ -809,9 +809,7 @@
         }
         .fonte-italic {
             display: block; /* Garante que a citação ocupe uma linha inteira */
-            margin: 0 40px; /* Adiciona margens horizontais */
             font-style: italic; /* Mantém o estilo itálico, caso necessário */
-            text-align: justify; /* Justifica o texto para alinhamento mais formal */
         }
 
         .italic{
@@ -1225,20 +1223,23 @@
                 font-family: 'Roboto', sans-serif;
                 color: #333;
                 line-height: 1.6; /* Melhor espaçamento entre linhas */
-                text-align: justify;
+                text-align: left;
                 white-space: pre-line; /* Respeita as quebras de linha */
         }
 
         /* Ajustes responsivos */
         @media (max-width: 768px) {
             .poet-frame p {
-                font-size: 14px;
+                font-size: 16px;
+                text-align: left;
             }
         }
 
         @media (max-width: 480px) {
             .poet-frame p {
-                font-size: 12px;
+                font-size: 14px;
+                text-align: left;
+
             }
         }
         /* Quadro com borda violeta */
@@ -1259,6 +1260,7 @@
             font-family: 'Roboto', sans-serif;
             color: #333; /* Verde */
             margin-bottom: 5px;
+            font-weight: 500;
         }
 
         /* Imagem dentro do quadro */
@@ -2392,9 +2394,9 @@
             <p><strong>Polissilábicas</strong>: incompetência, aplicação, vocabulário.</p>
         </div>
         <p>Verifiquem:</p>
-        <p><span class="fonte-italic">“Que lembrança darei ao país que me deu<br>
+        <p><span class="fonte-menor">“Que lembrança darei ao país que me deu<br>
         tudo o que lembro e sei, tudo quanto senti?”</span></p>
-        <p><span class="text-right">(Carlos Drummond de Andrade)</span></p>
+        <h3><span class="text-right">(Carlos Drummond de Andrade)</span></h3>
         <p>Perceba que os monossílabos “que”, “ao”, “me”, “o”, “e” são átonos, pronunciados tão fracamente que se
         apoiam na palavra subsequente. Já os monossílabos representados por “deu” e “sei” demonstram um
         timbre mais forte, caracterizando-se, portanto, como tônicos.</p>
@@ -2519,14 +2521,17 @@
         <!-- Quadro com estilo de slide -->
         <div class="quadro-textual">
             <div class="conteudo-textual">
-                <p><strong>ele detém – eles detêm <span class="text-right"> ele mantém – eles mantêm</span><br><br>ele intervém – eles intervêm</span></strong></p>
+                <p><strong>ele detém – eles detêm</strong></p>
+                <p><strong>ele mantém – eles mantêm</strong></p>
+                <p><strong>ele intervém – eles intervêm</strong></p>
             </div>
         </div>
         <div class="quadro-violeta">
             <p><strong><span class="text-red">ATENÇÃO:</span></strong> Algumas palavras <strong>mudam o significado quando usamos o acento circunflexo.</strong></p>
-            <p>O Japão possui grande <strong>influência</strong> na economia mundial. <span class="text-right"><strong>influência</strong> (substantivo)</span></p>
-            <p>O Japão <strong>influencia</strong> muitos países do mundo. <span class="text-right"><strong>influencia</strong> (verbo)</span></p>
-            <p><strong>providencia</strong> (verbo) <span class="text-right"><strong>providência</strong> (substantivo)</span></p>
+            <p>O Japão possui grande <strong>influência</strong> na economia mundial.<br><br> <strong>influência</strong> (substantivo)</p>
+            <p>O Japão <strong>influencia</strong> muitos países do mundo.<br><br> <strong>influencia</strong> (verbo)</p><br>
+            <p><strong>▸ providencia</strong> (verbo)</p>
+            <p><strong>▸ providência</strong> (substantivo)</p>
         </div>
         <h1>3.5 ACENTO DIFERENCIAL</h1>
         <p>
