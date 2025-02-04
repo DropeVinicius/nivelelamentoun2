@@ -1378,6 +1378,37 @@
                 color: #333;
                 font-weight: normal;
         }
+
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+
         /* Conteúdo da Conclusão */
         .conclusao {
             display: flex;
@@ -1633,6 +1664,7 @@
             <li><a href="#secao1">Tópico 1</a></li>
             <li><a href="#secao2">Tópico 2</a></li>
             <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#download">Download</a></li>
             <li><a href="#conclusao">Conclusão</a></li>
             <li><a href="#referencias">Refs Bibliográficas</a></li>
         </ul>
@@ -2711,6 +2743,11 @@
                 transformar o conhecimento em um instrumento de desenvolvimento individual e coletivo, contribuindo
                 para uma comunicação mais consciente e uma sociedade mais conectada.</p>
             </div>
+        </div>
+        <div id="download" class="download-section">
+            <a href="https://drive.google.com/uc?export=download&id=1fh2oSG4w8bMaT9wBAtS8koRcCO-ulSdj" class="download-btn">
+                Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+            </a>
         </div>
     </section>
     <!-- Seção Referências-->
