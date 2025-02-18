@@ -1591,67 +1591,39 @@
                 width: 100%; /* Ajusta largura do divisor no mobile */
             }
         }
-                        /* Modal */
-            .modal {
-                display: none; /* Oculto por padrão */
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
-                display: flex; /* Flexbox para centralizar */
-                justify-content: center; /* Centraliza horizontalmente */
-                align-items: center; /* Centraliza verticalmente */
-            }
+                /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
 
-            /* Imagem dentro do modal */
-            .modal-content {
-                display: block;
-                max-width: 90%; /* Limita a largura da imagem */
-                max-height: 80%; /* Limita a altura da imagem */
-                margin-bottom: 10px;
-                border-radius: 5px; /* Bordas arredondadas */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
-            }
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
 
-            /* Texto de legenda */
-            #caption {
-                color: #fff; /* Cor do texto */
-                font-family: 'Roboto', sans-serif; /* Fonte */
-                font-size: 16px; /* Tamanho da fonte */
-                text-align: center; /* Centraliza o texto */
-                margin-top: 10px; /* Espaço entre a imagem e o texto */
-                padding: 0 20px; /* Adiciona espaçamento para não encostar nas bordas */
-                word-wrap: break-word; /* Permitir quebra de linha em textos longos */
-            }
-
-
-            /* Botão de fechar */
-            .close {
-                position: absolute;
-                top: 20px;
-                right: 35px;
-                color: #fff;
-                font-size: 40px;
-                cursor: pointer;
-            }
-
-            .close:hover {
-                color: #f1f1f1;
-            }
-
-            /* Responsividade */
-            @media (max-width: 768px) {
-                .modal-content {
-                    width: 90%; /* Ajusta a largura para telas menores */
-                }
-                .close {
-                    font-size: 30px;
-                }
-            }
-            
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }              
     </style>
 </head>
 <body>
@@ -1795,8 +1767,13 @@
         <div class="topico">
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737399287/Imagem_letras_j6bdpy.png"
-                    alt="Descrição da Tabela 1">
+                    alt="Descrição da Tabela 1" onclick="openModal(this)">
             </div>
+        </div>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
         </div>
         <p>Repare bem que nessas palavras, as letras destacadas, sozinhas ou agrupadas, representam o som /s/.
         Para entendermos como cada combinação de letras ajuda a representar o som /s/ em diferentes situações,
@@ -1856,7 +1833,7 @@
             <!-- Título centralizado -->
             <h2 class="titulo-quadro"><span class="text-green">Figura 1.</span> Som de /S/</h2>
             <!-- Imagem via link -->
-            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736453925/qjefzzuqb6u9gfhzewlc.png" alt="Descrição da imagem" class="imagem-quadro">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736453925/qjefzzuqb6u9gfhzewlc.png" alt="Descrição da imagem" class="imagem-quadro" onclick="openModal(this)">
             <!-- Fonte da imagem -->
             <p class="fonte-quadro"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024.</span></p>
             <!-- Descrição da imagem -->
@@ -2033,14 +2010,14 @@
         <div class="topico">
             <p><strong>1.</strong></p>
             <div class="imagem-container">
-                <img class="expandable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela2_iedbab.png" alt="Descrição da Tabela 1">
+                <img class="expandable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela2_iedbab.png" alt="Descrição da Tabela 1" onclick="openModal(this)">
             </div>
         </div>
         <!-- Tópico 2 -->
         <div class="topico">
             <p><strong>2.</strong></p>
             <div class="imagem-container">
-                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1739879624/rroaykcsgelno9oxjue1.png" alt="Descrição da Tabela 2">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1739879624/rroaykcsgelno9oxjue1.png" alt="Descrição da Tabela 2" onclick="openModal(this)">
             </div>
         </div>
         <!-- Tópico 3 -->
@@ -2048,7 +2025,7 @@
             <p><strong>3.</strong>Escreve-se com X ou CH?</p>
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela3_jngjib.png"
-                     alt="Descrição da Tabela 3">
+                     alt="Descrição da Tabela 3" onclick="openModal(this)">
             </div>
         </div>
         <!-- Tópico 4 -->
@@ -2056,7 +2033,7 @@
             <p><strong>4.</strong>O uso da letra H</p>
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela4_nuanu0.png"
-                     alt="Descrição da Tabela 4">
+                     alt="Descrição da Tabela 4" onclick="openModal(this)">
                      <p><span class="fonte-menor">*etimologia = estudo da origem e da evolução das palavras</span></p>
             </div>
         </div>
@@ -2065,7 +2042,7 @@
             <p><strong>5.</strong>Escreve-se com G ou J?</p>
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela5_kbfyqv.png"
-                    alt="Descrição da Tabela 5">
+                    alt="Descrição da Tabela 5" onclick="openModal(this)">
             </div>
             <p><span class="fonte-menor">Vamos um pouco além da grafia G ou J?</span></p>
         </div>
@@ -2074,7 +2051,7 @@
         <div class="topico">
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela6_wavewh.png"
-                    alt="Descrição da Tabela">
+                    alt="Descrição da Tabela" onclick="openModal(this)">
             </div>
         </div>
         <!-- Tópico 6 -->
@@ -2082,7 +2059,7 @@
             <p><strong>6.</strong> Escreve-se com C ou QU?</p>
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela7_v9qin8.png"
-                    alt="Descrição da Tabela 6">
+                    alt="Descrição da Tabela 6" onclick="openModal(this)">
             </div>
         </div>
         <h1><span class="text-green">1.4 PALAVRAS HOMÔNIMAS E PARÔNIMAS</span></h1>
@@ -2095,7 +2072,7 @@
         <div class="topico">
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela8_gtz5fw.png"
-                    alt="Descrição da Tabela">
+                    alt="Descrição da Tabela" onclick="openModal(this)">
             </div>
         </div>
         <p>As palavras <span class="text-red">PARÔNIMAS</span> são aquelas parecidas na grafia ou na pronúncia, mas apresentam
@@ -2104,7 +2081,7 @@
         <div class="topico">
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782310/Tabela9_dg5bfm.png"
-                    alt="Descrição da Tabela">
+                    alt="Descrição da Tabela" onclick="openModal(this)">
             </div>
         </div>
     </section>
@@ -2395,7 +2372,7 @@
         <div class="quadrov">
             <!-- Imagem via link -->
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela10_yvtrjn.png"
-                alt="Descrição da imagem" class="imagem-quadrov">
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
             <!-- Fonte da imagem -->
             <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024.</span></p>
             <!-- Descrição da imagem -->
@@ -2450,8 +2427,8 @@
             <div class="topico">
                 <div class="imagem-container">
                     <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1739879666/gmusvhjih5kxms0n17mg.png"
-                        alt="Descrição da Tabela"><br><br><br><br>
-                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1739879735/em3jg9mlfkcmwoedcptj.png" alt="Descrição da Tabela">
+                        alt="Descrição da Tabela" onclick="openModal(this)"><br><br><br><br>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1739879735/em3jg9mlfkcmwoedcptj.png" alt="Descrição da Tabela" onclick="openModal(this)">
                 </div>
     </section>
     <section id="secao3" class="secao1">
@@ -2528,7 +2505,7 @@
         <div class="quadrov">
             <!-- Imagem via link -->
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736974969/ctxbsiy28px8misckncp.png"
-                alt="Descrição da imagem" class="imagem-quadrov">
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
             <!-- Fonte da imagem -->
             <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: https://blog.enem.com.br/novo-acordo-ortografico-uso-do-trema/</span></p>
             <!-- Descrição da imagem -->
@@ -2578,7 +2555,7 @@
         <div class="topico">
             <div class="imagem-container">
                 <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela13_rxze9n.png"
-                    alt="Descrição da Tabela">
+                    alt="Descrição da Tabela" onclick="openModal(this)">
             </div>
         </div>
         <p>Continuam iguais os pares:</p>
@@ -2643,7 +2620,7 @@
         <div class="quadro">
             <!-- Imagem via link -->
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737038271/qrxb0pxai57n46jawpji.jpg"
-                alt="Descrição da imagem" class="imagem-quadro">
+                alt="Descrição da imagem" class="imagem-quadro" onclick="openModal(this)">
             <!-- Fonte da imagem -->
             <p class="fonte-quadro"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024. Adaptado de 123RF.</span></p>
             <!-- Descrição da imagem -->
@@ -2675,25 +2652,25 @@
     <div class="topico">
         <div class="imagem-container">
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela14_k1ypcd.png"
-                alt="Descrição da Tabela">
+                alt="Descrição da Tabela" onclick="openModal(this)">
         </div>
     </div>
     <div class="topico">
         <div class="imagem-container">
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela15_i90vtv.png"
-                alt="Descrição da Tabela">
+                alt="Descrição da Tabela" onclick="openModal(this)">
         </div>
     </div>
     <div class="topico">
         <div class="imagem-container">
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782311/Tabela16_gv1zfh.png"
-                alt="Descrição da Tabela">
+                alt="Descrição da Tabela" onclick="openModal(this)">
         </div>
     </div>
     <div class="topico">
         <div class="imagem-container">
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1736782312/Tabela17_aihyep.png"
-                alt="Descrição da Tabela">
+                alt="Descrição da Tabela" onclick="openModal(this)">
         </div>
     </div>
         <h1>3.7 LETRAS MAIÚSCULAS</h1>
@@ -2938,30 +2915,19 @@
                                 closeVideoModal();
                             }
                         });
-                       // Seleciona o modal, imagem do modal e elemento de legenda
-                        const modal = document.getElementById("imageModal");
-                        const modalImg = document.getElementById("modalImage");
-                        const captionText = document.getElementById("caption");
+                       // Abrir modal ao clicar na imagem
+                        function openModal(imgElement) {
+                            let modal = document.getElementById("imageModal");
+                            let modalImg = document.getElementById("modalImg");
 
-                        // Adiciona evento de clique em todas as imagens
-                        document.querySelectorAll(".imagem-container img").forEach(img => {
-                            img.onclick = function () {
-                                modal.style.display = "flex"; // Exibe o modal
-                                modalImg.src = this.src; // Define a imagem do modal
-                                captionText.innerHTML = this.alt || "Sem descrição disponível"; // Define o texto do caption
-                            };
-                        });
+                            modal.style.display = "flex";
+                            modalImg.src = imgElement.src;
+                        }
 
-                        // Fecha o modal ao clicar no botão de fechar
-                        const close = document.querySelector(".close");
-                        close.onclick = function () {
-                            modal.style.display = "none";
-                        };
-
-                            // Garantir que o modal esteja fechado ao carregar a página
-                            window.onload = function () {
-                                modal.style.display = "none"; // Ocultar o modal ao carregar
-                            };
+                        // Fechar modal ao clicar no fundo ou no botão "X"
+                        function closeModal() {
+                            document.getElementById("imageModal").style.display = "none";
+                        }
     </script>
 </body>
 </html>
