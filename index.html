@@ -23,7 +23,7 @@
     
         .titulo-programa {
             font-family: 'Bebas Neue', cursive;
-            font-size: 70px;
+            font-size: 50px;
             color: #003974;
             font-weight: lighter;
         }
@@ -1477,7 +1477,9 @@
             align-items: center;
             padding: 0;
             background-color: #FFF; /* Fundo neutro */
-            border-top: 5px solid #015A42;
+            border-top: 3px solid #015A42;
+            border-bottom: 3px solid #015A42;
+            
         }
 
         .referencias .titulo-referencias {
@@ -1503,7 +1505,7 @@
             line-height: 1.6;
             text-align: justify;
             color: #000;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .referencias .caixa-texto {
             word-wrap: break-word;
@@ -1546,11 +1548,11 @@
         
         /* Estilização do rodapé */
         .footer {
-            border-top: 5px solid #015A42; /* Borda superior */
             background-color: #FFFFFF; /* Fundo branco */
             text-align: center; /* Centralizar texto */
             padding: 15px 0; /* Espaçamento interno */
             box-sizing: border-box; /* Inclui padding nas dimensões */
+            border-top: 3px solid #015A42; /* Borda superior */
         }
 
         .footer p {
@@ -1623,7 +1625,65 @@
             font-size: 35px;
             font-weight: bold;
             cursor: pointer;
-        }              
+        }    
+        .logo-final {
+            background-color: #b9e5a92c;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 3px solid #015A42;
+        }
+
+        .logo-final img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        /* Nova seção com os títulos ocupando a tela inteira */
+        .ficha-titulos {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .ficha-titulos h2,
+        .ficha-titulos h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            font-size: 40px;
+            color: #0058B4;
+            margin: 10px 0;
+        }
+
+        /* Mantemos a ficha técnica como estava */
+        .ficha-tecnica {
+            background-color: #FFF;
+            padding: 60px 20px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .ficha-tecnica p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px auto;
+            max-width: 700px;
+        }
+
+        .ficha-tecnica strong {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .paragraforeduzido {
+            font-size: 14px;
+        }          
     </style>
 </head>
 <body>
@@ -1646,20 +1706,23 @@
             <li><a href="#referencias">Refs Bibliográficas</a></li>
         </ul>
     </div>
+
     <!-- Título -->
     <section id="titulo" class="titulo-intro">
-        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+        <h1 class="titulo-programa"></h1>
     </section>
     
     <!-- Capa do Livro -->
     <section id="capa-livro" class="capa-livro">
         <div class="borda superior"></div>
         <div class="conteudo-capa">
+            <h1 class="titulo-programa">Programa de Atualização em Fundamentos da<br> Língua Portuguesa.</h1>
             <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 1</h1>
             <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
         </div>
         <div class="borda inferior"></div>
     </section>
+
     <!-- Seção Introdução -->
     <section id="introducao" class="introducao">
         <!-- Barra Superior -->
@@ -1676,7 +1739,7 @@
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
                     <p>“Cabe à gramática registrar os fatos da língua geral ou padrão, estabelecendo os preceitos de como
                     se fala e escreve bem, ou de como se pode falar e escrever uma língua. Daí ser a gramática, ao
-                    mesmo tempo, uma ciência e uma arte.” Evanildo Bechara</p>
+                    mesmo tempo, uma ciência e uma arte.” <br><strong>Evanildo Bechara</strong></p>
                 </div>
                 <p>Olá estudante!</p>
                 <p>Você já parou para pensar em como as normas gramaticais influenciam a maneira como falamos e
@@ -2746,6 +2809,48 @@
                 <p><strong>VOCABULÁRIO ortográfico da Língua Portuguesa.</strong> 5.ed. São Paulo: Global, 2009.</p>
             </div>
         </div>
+    </section>
+    <!-- Seção com os créditos e ficha técnica -->
+    <section class="ficha-tecnica">
+        <p>CASA NOSSA SENHORA DA PAZ – AÇÃO SOCIAL FRANCISCANA, PROVÍNCIA FRANCISCANA DA <br>
+            IMACULADA CONCEIÇÃO DO BRASIL – ORDEM DOS FRADES MENORES</p>
+        <br>
+        <p><strong>GESTOR DO CENTRO DE INOVAÇÃO E SOLUÇÕES EDUCACIONAIS - CISE</strong>
+            Franklin Portela Correia</p>
+    
+        <p><strong>COORDENADORA DO PROGRAMA DE ATUALIZAÇÃO</strong>
+            Flavia Cristina Franco de Lima</p>
+    
+        <p><strong>SUPERVISORA EDUCACIONAL</strong>
+            Juliane Cristine Batista</p>
+    
+        <p><strong>DESIGNER INSTRUCIONAL</strong>
+            Ana Angelica Miranda Ramos</p>
+    
+        <p><strong>PROJETO GRÁFICO</strong>
+            Andréa Calegari<br>
+            Lucas Ichimaru Testa</p>
+    
+        <p><strong>DIAGRAMADORES</strong>
+            Andréa Calegari<br>
+            Lucas Ichimaru Testa</p>
+    
+        <p><strong>DESENVOLVEDOR</strong>
+            Pedro Vinicius Pires de Oliveira Dias</p>
+    
+        <p><strong>PRODUTOR AUDIOVISUAL</strong>
+            Cassio Martins de Carvalho</p>
+    
+        <p><strong>EDIÇÃO DE VÍDEOS</strong>
+            Rafael da Silva Oliveira<br>
+            Hugo Henrique Ferreira da Silva</p>
+    
+        <br><br>
+        <p><span class="paragraforeduzido">
+                © 2026 Universidade São Francisco<br>
+                Avenida São Francisco de Assis, 218<br>
+                CEP 12916-900 – Bragança Paulista/SP
+        </p></span>
     </section>
     <footer class="footer">
         <p>Copyright © de Universidade São Francisco</p>
